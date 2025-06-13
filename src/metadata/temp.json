@@ -1,0 +1,299 @@
+{
+  "tableConfig": {
+    "headers": [
+      {
+        "key": 0,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1",
+        "width": 50
+      },
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "Số hồ sơ",
+        "align": "center",
+        "value": "MaDinhDanh",
+        "type": "SoHoSo",
+        "class": "th-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 2,
+        "sortable": false,
+        "title": "Số đăng ký kiểm tra",
+        "align": "center",
+        "value": "SoDangKyKiemTra",
+        "type": "SoDangKyKiemTra",
+        "class": "th-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 3,
+        "sortable": false,
+        "title": "Nội dung",
+        "align": "center",
+        "value": "NoiDungHoSo",
+        "type": "NoiDungHoSo",
+        "class": "th-center"
+      },
+      {
+        "key": 4,
+        "sortable": false,
+        "title": "Ghi chú",
+        "align": "center",
+        "value": "TrichYeuHoSo",
+        "class": "th-center"
+      },
+      {
+        "key": 5,
+        "sortable": false,
+        "title": "Trạng thái",
+        "align": "center",
+        "value": "TrangThaiHoSo.TenMuc",
+        "class": "th-center",
+        "width": 150
+      },
+      {
+        "key": 6,
+        "value": "action",
+        "sortable": false,
+        "title": "Thao tác",
+        "align": "center",
+        "type": "action",
+        "class": "th-center",
+        "width": 120
+      }
+    ],
+    "headersMobile": [
+      {
+        "key": 0,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "td-center verticalAlignTop py-1",
+        "width": 50
+      },
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "Nội dung hồ sơ",
+        "align": "center",
+        "value": "NoiDungHoSo",
+        "class": "td-left verticalAlignTop"
+      },
+      {
+        "key": 2,
+        "value": "action",
+        "sortable": false,
+        "title": "Thao tác",
+        "align": "center",
+        "type": "action",
+        "class": "td-center",
+        "width": 50
+      }
+    ],
+    "formSearch": [
+      {
+        "name": "soHoSo",
+        "title": "Số hồ sơ",
+        "type": "textfield",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "Nhập số hồ sơ",
+        "defaultValue": "",
+        "dataType": "",
+        "autoEvent": ""
+      },
+      {
+        "name": "soDangKyKiemTra",
+        "title": "Số đăng ký kiểm tra",
+        "type": "textfield",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "Nhập số đăng ký kiểm tra",
+        "defaultValue": "",
+        "dataType": "",
+        "autoEvent": ""
+      },
+      {
+        "name": "loaiPhuongTien_MaMuc",
+        "title": "Loại phương tiện",
+        "type": "select",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+        "responseDataApi": "content",
+        "mapping": "MaMuc",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      },
+      {
+        "name": "ngayNopHoSo_TuNgay",
+        "nameTo": "ngayNopHoSo_DenNgay",
+        "title": "Ngày nộp hồ sơ",
+        "type": "daterange",
+        "multiple": false,
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      },
+      {
+        "name": "ngayDangKyKiemTra_TuNgay",
+        "nameTo": "ngayDangKyKiemTra_DenNgay",
+        "title": "Ngày đăng ký kiểm tra",
+        "type": "daterange",
+        "multiple": false,
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      }
+    ],
+    "formChuHoSo": [
+      {
+        "fieldName": "TenGoi",
+        "fieldLabel": "Tên cá nhân, doanh nghiệp, tổ chức",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-12",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "DiaChi",
+        "fieldLabel": "Địa chỉ",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-12",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TinhThanh",
+        "fieldLabel": "Tỉnh/ Thành phố",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "/cmonmgt/internal/tinhthanh/1.0/filter",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [],
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false,
+        "emitChangeModelItem": true
+      },
+      {
+        "fieldName": "HuyenQuan",
+        "fieldLabel": "Huyện/ Quận",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "/cmonmgt/internal/huyenquan/1.0/filter",
+        "responseDataApi": "content",
+        "parent": "TinhThanh",
+        "parentMapping": "thamChieu_MaMuc",
+        "valueParentMapping": "MaMuc",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [],
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false,
+        "emitChangeModelItem": true
+      },
+      {
+        "fieldName": "XaPhuong",
+        "fieldLabel": "Xã/ Phường",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "/cmonmgt/internal/xaphuong/1.0/filter",
+        "responseDataApi": "content",
+        "parent": "HuyenQuan",
+        "parentMapping": "thamChieu_MaMuc",
+        "valueParentMapping": "MaMuc",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [],
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false,
+        "emitChangeModelItem": true
+      },
+      {
+        "fieldName": "SoDienThoai",
+        "fieldLabel": "Số điện thoại",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-6",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "Email",
+        "fieldLabel": "Địa chỉ email",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-6",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      }
+    ]
+  }
+}

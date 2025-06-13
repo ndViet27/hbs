@@ -1,0 +1,316 @@
+{
+  "title": "Danh sách cơ quan quản lý",
+  "loaiDoiTuong": "",
+  "tableHeaders": [
+    {
+      "key": "0",
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center sticky-column",
+      "width": 35,
+      "style": "left: 0px;"
+    },
+    {
+      "key": "1",
+      "sortable": false,
+      "title": "Mã định danh MOET",
+      "align": "center",
+      "value": "MaMOET",
+      "type": "text",
+      "class": "th-start py-1 sticky-column",
+      "width": 165,
+      "style": "left: 60px;"
+    },
+    {
+      "key": "2",
+      "sortable": false,
+      "title": "Tên cơ quan quản lý",
+      "align": "center",
+      "value": "TenCoQuanQuanLy",
+      "type": "text",
+      "class": "th-start sticky-column",
+      "width": 239
+    },
+    {
+      "key": "3",
+      "sortable": false,
+      "title": "Cấp hành chính",
+      "align": "center",
+      "value": "CapHanhChinh",
+      "type": "text",
+      "class": "th-start",
+      "width": 148
+    },
+    {
+      "key": "4",
+      "sortable": false,
+      "title": "Cơ quan quản lý cấp cha",
+      "align": "center",
+      "value": "CoQuanQuanLy",
+      "type": "text",
+      "class": "th-start",
+      "width": 244
+    },
+    {
+      "key": "5",
+      "sortable": false,
+      "title": "Mã phân cấp",
+      "align": "center",
+      "value": "MaPhanCap",
+      "type": "text",
+      "class": "th-start",
+      "width": 160
+    },
+    {
+      "key": "6",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "value": "",
+      "type": "",
+      "class": "th-center ",
+      "width": 89
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "CapHanhChinh",
+      "title": "Cấp hành chính",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "primKey": 1231232131,
+      "MaMOET": "123456",
+      "TenCoQuanQuanLy": "Phòng GD& ĐT huyện Đại Từ",
+      "CapHanhChinh": "Cấp huyện",
+      "CoQuanQuanLy": "Sở GD&ĐT tỉnh Thái Nguyên",
+      "MaPhanCap": "123"
+    }
+  ],
+  "detail": {
+    "title": "Chi tiết cơ quan quản lý",
+    "tabs": [
+      {
+        "tabId": "coQuanQuanLy",
+        "tabTitle": "Thông tin cơ quan quản lý",
+        "formInfo": [
+          {
+            "label": "Mã định danh",
+            "value": "maDinhDanh",
+            "type": "text"
+          },
+          {
+            "label": "Tên cơ quan quản lý",
+            "value": "tenCoQuanQuanLy",
+            "type": "text"
+          },
+          {
+            "label": "Cấp hành chính",
+            "value": "capHanhChinh",
+            "type": "text"
+          },
+          {
+            "label": "Địa chỉ hoạt động",
+            "value": "diaChiHoatDong",
+            "type": "text"
+          },
+          {
+            "label": "Cơ quan quản lý cấp cha",
+            "value": "coQuanQuanLyCapCha",
+            "type": "text"
+          },
+          {
+            "label": "Mã phân cấp",
+            "value": "maPhanCap",
+            "type": "text"
+          },
+          {
+            "label": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "type": "text"
+          },
+          {
+            "label": "Tình trạng hiệu lực",
+            "value": "tinhTrangHieuLuc",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tabId": "chungThuSo",
+        "tabTitle": "Chứng thư số",
+        "formInfo": [
+          {
+            "label": "Mã chứng thư số",
+            "value": "maChungThuSo",
+            "type": "text"
+          },
+          {
+            "label": "Đối tượng quản lý",
+            "value": "doiTuongQuanLy",
+            "type": "text"
+          },
+          {
+            "label": "Trạng thái chứng thư số",
+            "value": "trangThaiChungThuSo",
+            "type": "text"
+          },
+          {
+            "label": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "type": "text"
+          },
+          {
+            "label": "Thông tin chứng thư số",
+            "value": "thongTinChungThuSo",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tabId": "coSoGiaoDuc",
+        "tabTitle": "Danh sách cơ sở giáo dục",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Mã định danh MOET",
+            "align": "center",
+            "value": "maMoet",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 165,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Tên cơ sở giáo dục",
+            "align": "center",
+            "value": "tenCoSoGiaoDuc",
+            "type": "text",
+            "class": "th-start",
+            "width": 239
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Địa chỉ hoạt động chính",
+            "align": "center",
+            "value": "diaChiHoatDongChinh",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Năm thành lập",
+            "align": "center",
+            "value": "namThanhLap",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Loại chương trình giáo dục chính",
+            "align": "center",
+            "value": "loaiCTGiaoDucChinh",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "6",
+            "sortable": false,
+            "title": "Tình trạng hoạt động",
+            "align": "center",
+            "value": "tinhTrangHoatDong",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "namThanhLap",
+            "title": "Năm thành lập",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "chuongTrinhGiaoDuc",
+            "title": "Chương trình giáo dục",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "loaiCoSoGiaoDuc",
+            "title": "Loại cơ sở giáo dục",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      }
+    ]
+  }
+}

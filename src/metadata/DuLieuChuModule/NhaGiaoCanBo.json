@@ -1,0 +1,127 @@
+{
+  "title": "Danh sách nhà giáo cán bộ quản lý",
+  "loaiDoiTuong": "",
+  "tableHeaders": [
+    {
+      "key": "0",
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center sticky-column",
+      "width": 40,
+      "style": "left: 0px;"
+    },
+    {
+      "key": "1",
+      "sortable": false,
+      "title": "Mã định danh MOET",
+      "align": "center",
+      "value": "MaMOET",
+      "type": "text",
+      "class": "th-start td-center py-1 sticky-column",
+      "width": 161
+    },
+    {
+      "key": "2",
+      "sortable": false,
+      "title": "Họ và tên",
+      "align": "center",
+      "value": "HoVaTen",
+      "type": "text",
+      "class": "th-start sticky-column",
+      "width": 220
+    },
+    {
+      "key": "3",
+      "sortable": false,
+      "title": "Ngày sinh",
+      "align": "center",
+      "value": "NgaySinh",
+      "type": "text",
+      "class": "th-start",
+      "width": 130
+    },
+    {
+      "key": "4",
+      "sortable": false,
+      "title": "Giới tính",
+      "align": "center",
+      "value": "GioiTinh",
+      "type": "text",
+      "class": "th-start",
+      "width": 110
+    },
+    {
+      "key": "5",
+      "sortable": false,
+      "title": "Nơi công tác",
+      "align": "center",
+      "value": "NoiCongTac",
+      "type": "text",
+      "class": "th-start",
+      "width": 330
+    },
+    {
+      "key": "6",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "value": "",
+      "type": "text",
+      "class": "th-center ",
+      "width": 90
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "primKey": 1231232131,
+      "MaMOET": "1234566",
+      "HoVaTen": "Nguyễn Hương Giang",
+      "NgaySinh": "24/12/2016",
+      "GioiTinh": "2006",
+      "NoiCongTac": "123"
+    }
+  ],
+  "detail": {
+    "title": "Chi tiết cơ sở giáo dục",
+    "tabs": [
+      {
+        "tabId": "thongTinChungCuaCoSo",
+        "tabTitle": "Thông tin chung của cơ sở"
+      },
+      {
+        "tabId": "thongTinTuyenSinh",
+        "tabTitle": "Thông tin tuyển sinh"
+      },
+      {
+        "tabId": "danhSachNhapHoc",
+        "tabTitle": "Danh sách nhập học"
+      },
+      {
+        "tabId": "chungThuSo",
+        "tabTitle": "Chứng thư số"
+      }
+    ]
+  },
+
+  "formSearch": [
+    {
+      "name": "NoiCongTac",
+      "title": "Nơi công tác",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    }
+  ]
+}

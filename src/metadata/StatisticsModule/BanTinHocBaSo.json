@@ -1,0 +1,302 @@
+{
+  "title": "Bản tin học bạ số",
+  "collection": "bantindulieuhocba",
+  "placeHolderSearch": "Nhập từ khóa tìm kiếm ...",
+  "tableHeaders": [
+    [
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1",
+        "width": 50,
+        "rowspan": 2
+      },
+      {
+        "key": 2,
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "ten_co_quan_don_vi",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center text-center",
+        "rowspan": 2,
+        "width": 150
+      },
+      {
+        "key": 3,
+        "sortable": false,
+        "title": "Cấp học",
+        "align": "center",
+        "value": "cap_hoc_id",
+        "type": "CapHoc",
+        "class": "th-center text-center",
+        "width": 150,
+        "rowspan": 2
+      },
+      {
+        "key": 4,
+        "sortable": false,
+        "title": "Số lượng bản tin",
+        "align": "center",
+        "value": "soluongbantin",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150,
+        "colspan": 5,
+        "isParent": true
+      }
+    ],
+    [
+      {
+        "key": "4.1",
+        "sortable": false,
+        "title": "Mới tiếp nhận",
+        "align": "center",
+        "value": "moiTiepNhan",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": "4.2",
+        "sortable": false,
+        "title": "Đang xử lý",
+        "align": "center",
+        "value": "dangXuLy",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": "4.3",
+        "sortable": false,
+        "title": "Đã hoàn thành xử lý",
+        "align": "center",
+        "value": "daHoanThanhXuLy",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": "4.4",
+        "sortable": false,
+        "title": "Đã tạo bản tin trả lời",
+        "align": "center",
+        "value": "daTaoBanTinTraLoi",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": "4.5",
+        "sortable": false,
+        "title": "Đã đọc bản tin trả lời",
+        "align": "center",
+        "value": "daDocBanTinTraLoi",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      }
+    ]
+  ],
+  "tableheadersMobile": [
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center verticalAlignTop td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Tên đăng nhập",
+      "align": "center",
+      "value": "TenDangNhap",
+      "type": "text",
+      "class": "th-center verticalAlignTop",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "td-center",
+      "width": 150
+    }
+  ],
+  "tableConfigs": {
+    "api": "",
+    "headers": [
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center verticalAlignTop td-center py-1",
+        "width": 50
+      },
+      {
+        "key": 2,
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "CoSoGiaoDuc",
+        "type": "object",
+        "mapping": "TenMuc",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 3,
+        "sortable": false,
+        "title": "Cấp học",
+        "align": "center",
+        "value": "caphoc",
+        "type": "object",
+        "mapping": "TenMuc",
+        "class": "th-center text-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 4,
+        "sortable": false,
+        "title": "Số lượng bản tin",
+        "align": "center",
+        "value": "soluongbantin",
+        "type": "number",
+        "children": [
+          {
+            "key": 1,
+            "sortable": false,
+            "title": "Mới tiếp nhận",
+            "align": "center",
+            "value": "moitiepnhan",
+            "type": "number",
+            "class": "th-center text-center verticalAlignTop"
+          },
+          {
+            "key": 2,
+            "sortable": false,
+            "title": "Đang xử lý",
+            "align": "center",
+            "value": "dangxuly",
+            "type": "number",
+            "class": "th-center text-center verticalAlignTop"
+          },
+          {
+            "key": 3,
+            "sortable": false,
+            "title": "Đã hoàn thành xử lý",
+            "align": "center",
+            "value": "dahoanthanhxuly",
+            "type": "number",
+            "class": "th-center text-center verticalAlignTop"
+          },
+          {
+            "key": 4,
+            "sortable": false,
+            "title": "Đã tạo bản tin trả lời",
+            "align": "center",
+            "value": "dataobantintraloi",
+            "type": "number",
+            "class": "th-center text-center verticalAlignTop"
+          },
+          {
+            "key": 5,
+            "sortable": false,
+            "title": "Đã đọc bản tin trả lời",
+            "align": "center",
+            "value": "dadocbantintraloi",
+            "type": "number",
+            "class": "th-center text-center verticalAlignTop"
+          }
+        ],
+        "class": "th-center text-center verticalAlignTop"
+      }
+    ],
+    "itemsPerPage": 20,
+    "responseDataApi": "content",
+    "paramsSearch": {},
+    "data": [],
+    "groupBy": true,
+    "search": false
+  },
+  "formSearch": [
+    {
+      "fieldName": "coQuanQuanLyId",
+      "fieldLabel": "Cơ quan quản lý",
+      "fieldType": "select",
+      "multiple": false,
+      "itemText": "ten_co_quan_quan_ly",
+      "itemValue": "co_quan_quan_ly_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "api": "/dulieuchu/tracuu/internal/coquanquanly/1.0/filter",
+      "params": {
+        "page": 0,
+        "size": 50,
+        "hasChaID": false
+      },
+      "keySearch": "keyword",
+      "responseDataApi": "result",
+      "required": true,
+      "rules": [],
+      "readonly": false
+    },
+    {
+      "fieldName": "capHocId",
+      "fieldLabel": "Cấp học",
+      "fieldType": "select",
+      "multiple": false,
+      "itemText": "ten_cap_hoc",
+      "itemValue": "cap_hoc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "api": "/dulieuchu/tracuu/internal/danhmuc/1.0/filter",
+      "params": {
+        "page": 0,
+        "size": 20,
+        "keyword": "",
+        "orderFields": "ThoiGianTao",
+        "orderTypes": "desc",
+        "tenDanhMuc": "dm_cap_hoc"
+      },
+      "keySearch": "keyword",
+      "responseDataApi": "result",
+      "required": false,
+      "rules": [],
+      "readonly": false
+    },
+    {
+      "fieldName": "ngayGuiBaoCao_TuNgay",
+      "nameTo": "ngayGuiBaoCao_DenNgay",
+      "fieldLabel": "Ngày gửi báo cáo",
+      "fieldType": "daterange",
+      "multiple": false,
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "required": false,
+      "rules": [],
+      "readonly": false
+    }
+  ]
+}

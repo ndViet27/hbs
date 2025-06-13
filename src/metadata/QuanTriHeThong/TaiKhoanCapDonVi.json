@@ -1,0 +1,1027 @@
+{
+  "title": "Danh sách tài khoản cấp đơn vị",
+  "collection": "quanlytaikhoan",
+  "type": "taikhoandonvi",
+  "placeHolderSearch": "Nhập tên tài khoản, từ khóa tìm kiếm ...",
+  "tableHeaders": [
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Tên đăng nhập",
+      "align": "center",
+      "value": "TenDangNhap",
+      "type": "text",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "sortable": false,
+      "title": "Tên tài khoản",
+      "align": "center",
+      "value": "TenTaiKhoan",
+      "type": "text",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 4,
+      "sortable": false,
+      "title": "Đối tượng xác thực",
+      "align": "center",
+      "value": "DoiTuongXacThuc",
+      "type": "object",
+      "mapping": "TenMuc",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 5,
+      "sortable": false,
+      "title": "Tình trạng sử dụng tài khoản",
+      "align": "center",
+      "value": "TinhTrangSuDungTaiKhoan",
+      "type": "object",
+      "mapping": "TenMuc",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 6,
+      "sortable": false,
+      "title": "Tài khoản quản trị",
+      "align": "center",
+      "value": "TaiKhoanQuanTri",
+      "type": "boolean",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 6,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "th-center text-center",
+      "width": 200
+    }
+  ],
+  "tableheadersMobile": [
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Tên đăng nhập",
+      "align": "center",
+      "value": "TenDangNhap",
+      "type": "text",
+      "class": "th-center",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "td-center",
+      "width": 150
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "vaiTro_MaMuc",
+      "title": "Vai trò",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+      "responseDataApi": "content",
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "TaiKhoanQuanTri",
+      "title": "Tài khoản quản trị",
+      "type": "checkbox",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "autoEvent": ""
+    }
+  ],
+  "create": {
+    "title": "Thêm mới tài khoản người dùng",
+    "formCreate": [
+      {
+        "fieldName": "TenGoi",
+        "fieldLabel": "Tên gọi",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "HeThongDinhDanh",
+        "fieldLabel": "Hệ thống định danh",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [
+          {
+            "TenMuc": "Hệ thống định danh SSO",
+            "MaMuc": "01"
+          }
+        ],
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TinhTrangSuDungTaiKhoan",
+        "fieldLabel": "Tình trạng sử dụng",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [
+          {
+            "TenMuc": "Đang sử dụng",
+            "MaMuc": "01"
+          },
+          {
+            "TenMuc": "Chưa kích hoạt",
+            "MaMuc": "02"
+          }
+        ],
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TenTaiKhoan",
+        "fieldLabel": "Tên tài khoản",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "MaSoID",
+        "fieldLabel": "Mã số ID",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "ThuDienTu",
+        "fieldLabel": "Thư điện tử",
+        "fieldType": "email",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "PhanVungDuLieu",
+        "fieldLabel": "Phân vùng dữ liệu truy cập",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-12",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [
+          {
+            "TenMuc": "Văn phòng Bộ giáo dục",
+            "MaMuc": "01"
+          }
+        ],
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "PhanVungDuLieuNgamDinh",
+        "fieldLabel": "Phân vùng dữ liệu ngầm định",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-12",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [
+          {
+            "TenMuc": "Bộ giáo dục",
+            "MaMuc": "01"
+          }
+        ],
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TaiKhoanQuanTri",
+        "fieldLabel": "Tài khoản quản trị",
+        "fieldType": "checkbox",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      }
+    ]
+  },
+  "detail": {
+    "title": "Chi tiết tài khoản người dùng",
+    "formInfo": [
+      {
+        "label": "Tên gọi",
+        "value": "TenGoi",
+        "type": "text"
+      },
+      {
+        "label": "Tên tài khoản",
+        "value": "TenTaiKhoan",
+        "type": "text"
+      },
+      {
+        "label": "Tình trạng sử dụng tài khoản",
+        "value": "TinhTrangSuDungTaiKhoan",
+        "type": "object",
+        "mapping": "TenMuc"
+      },
+      {
+        "label": "Tài khoản quản trị",
+        "value": "TaiKhoanQuanTri",
+        "type": "boolean"
+      },
+      {
+        "label": "Phân vùng dữ liệu truy cập",
+        "value": "PhanVungDuLieu",
+        "type": "list",
+        "mapping": "TenMuc"
+      },
+      {
+        "label": "Phân vùng dữ liệu ngầm định",
+        "value": "PhanVungDuLieuNgamDinh",
+        "type": "object",
+        "mapping": "TenMuc"
+      }
+    ],
+    "formUpdate": []
+  },
+  "tempDanhMuc": [
+    {
+      "MaMuc": 1,
+      "TenMuc": "Danh mục cơ quan quản lý"
+    },
+    {
+      "MaMuc": 2,
+      "TenMuc": "Danh mục cơ sở giáo dục"
+    },
+    {
+      "MaMuc": 3,
+      "TenMuc": "Danh mục cấp học"
+    },
+    {
+      "MaMuc": 4,
+      "TenMuc": "Danh mục môn học"
+    },
+    {
+      "MaMuc": 5,
+      "TenMuc": "Danh mục ví dụ 1"
+    },
+    {
+      "MaMuc": 6,
+      "TenMuc": "Danh mục ví dụ 2"
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "TenDangNhap": "tendangnhapcapdonvi1",
+      "TenTaiKhoan": "tentaikhoancapdonvi1",
+      "TinhTrangSuDungTaiKhoan": {
+        "TenMuc": "Đang sử dụng",
+        "MaMuc": "01"
+      },
+      "TaiKhoanQuanTri": true,
+      "id": 1,
+      "primKey": 3132341333123,
+      "PhanVungDuLieu": {
+        "TenMuc": "Bộ giáo dục",
+        "MaDinhDanh": "BGD-001"
+      },
+      "VaiTro": [
+        {
+          "TenMuc": "Bộ trưởng",
+          "MaMuc": "001"
+        }
+      ],
+      "TrangThaiDuLieu": {
+        "TenMuc": "Chính thức",
+        "MaMuc": "02"
+      }
+    }
+  ],
+  "tempVaiTro": [
+    {
+      "primKey": "177",
+      "ThoiGianTao": "2025-03-07T08:28:53",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "admin",
+      "TenMuc": "Quản trị viên đơn vị",
+      "Id": 177,
+      "UngDung": [],
+      "TaiKhoanQuanTri": true
+    },
+    {
+      "primKey": "153",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CAN_BO_CHUYEN_MON",
+      "TenMuc": "Cán bộ chuyên môn",
+      "Id": 153,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "176",
+      "ThoiGianTao": "2025-03-07T08:28:53",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CAN_BO_DAU_MOI",
+      "TenMuc": "Cán bộ đầu mối phần Định hướng - Kế hoạch",
+      "Id": 176,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "155",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CAN_BO_TONG_HOP",
+      "TenMuc": "Cán bộ tổng hợp",
+      "Id": 155,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "163",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CanBoChienSiAd",
+      "TenMuc": "Quản lý cán bộ chiến sĩ",
+      "Id": 163,
+      "UngDung": [
+        {
+          "id": 7,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "162",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CanBoChienSiTV",
+      "TenMuc": "Cán bộ chiến sĩ",
+      "Id": 162,
+      "UngDung": [
+        {
+          "id": 6,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "166",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CHANH_THANH_TRA",
+      "TenMuc": "Chánh thanh tra",
+      "Id": 166,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "165",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CoQuanDonViAd",
+      "TenMuc": "Quản lý cơ quan đơn vị",
+      "Id": 165,
+      "UngDung": [
+        {
+          "id": 9,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "164",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "CoQuanDonViTV",
+      "TenMuc": "Cơ quan đơn vị",
+      "Id": 164,
+      "UngDung": [
+        {
+          "id": 8,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "157",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "DOI_TONG_HOP",
+      "TenMuc": "Đội tổng hợp",
+      "Id": 157,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "174",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "GIAI_QUYET_KNTC",
+      "TenMuc": "Giải quyết khiếu nại, tố cáo",
+      "Id": 174,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "175",
+      "ThoiGianTao": "2025-03-07T08:28:53",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "GIAM_SAT_XLSTT",
+      "TenMuc": "Giám sát, thẩm định, xử lý sau thanh tra",
+      "Id": 175,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "141",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "Guest",
+      "TenMuc": "Khách truy cập (không có tài khoản)_cũ",
+      "MaPhienBan": "1",
+      "Id": 141,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "178",
+      "ThoiGianTao": "2025-03-07T08:28:53",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "HDTT_TOAN_QUOC",
+      "TenMuc": "Toàn quốc",
+      "Id": 178,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "171",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "KIEM_TRA_CHAP_HANH_PHAP_LUAT",
+      "TenMuc": "Kiểm tra chấp hành pháp luật về PCTNTC",
+      "Id": 171,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "170",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "KIEM_TRA_TRACH_NHIEM_THU_TRUONG",
+      "TenMuc": "Kiểm tra trách nhiệm thủ trưởng về TTr, TCD, GQKNTC và PCTN",
+      "Id": 170,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "150",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "LANH_DAO_CO_QUAN",
+      "TenMuc": "Lãnh đạo cơ quan",
+      "Id": 150,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "149",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "LANH_DAO_THAM_MUU",
+      "TenMuc": "Lãnh đạo tham mưu",
+      "Id": 149,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "154",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "LUU_TRU",
+      "TenMuc": "Cán bộ lưu trữ",
+      "Id": 154,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "144",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính thức"
+      },
+      "MaMuc": "Member",
+      "TenMuc": "Thành viên (người có tài khoản)",
+      "MaPhienBan": "1",
+      "Id": 144,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "146",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "monitor",
+      "TenMuc": "Giám sát hệ thống",
+      "Id": 146,
+      "UngDung": [
+        {
+          "id": 1,
+          "@type": "C_VaiTroSuDung",
+          "MaMuc": "congthongtin",
+          "TenMuc": "Cổng thông tin"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "167",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "PHO_CHANH_THANH_TRA",
+      "TenMuc": "Phó chánh thanh tra",
+      "Id": 167,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "152",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "PHO_TRUONG_PHONG_CHUYEN_MON",
+      "TenMuc": "Phó trưởng phòng chuyên môn",
+      "Id": 152,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "172",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "PHONG_CHONG_THAM_NHUNG",
+      "TenMuc": "Phòng chống tham nhũng",
+      "Id": 172,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "158",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "QuanTriPhongBan",
+      "TenMuc": "Quản Trị Phòng Ban",
+      "Id": 158,
+      "UngDung": [
+        {
+          "id": 2,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "145",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính thức"
+      },
+      "MaMuc": "SuperAdmin",
+      "TenMuc": "Quản trị khai thác ứng dụng",
+      "MaPhienBan": "1",
+      "Id": 145,
+      "UngDung": [],
+      "TaiKhoanQuanTri": true
+    },
+    {
+      "primKey": "169",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "THANH_TRA_CHUYEN_NGANH",
+      "TenMuc": "Thanh tra chuyên ngành",
+      "Id": 169,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "168",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "THANH_TRA_HANH_CHINH",
+      "TenMuc": "Thanh tra hành chính",
+      "Id": 168,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "159",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "ThanhVienPhongBan",
+      "TenMuc": "Thành Viên Phòng Ban",
+      "Id": 159,
+      "UngDung": [
+        {
+          "id": 3,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "173",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "TIEP_CONG_DAN_XLDT",
+      "TenMuc": "Tiếp công dân, xử lý đơn thư",
+      "Id": 173,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "151",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "TRUONG_PHONG_CHUYEN_MON",
+      "TenMuc": "Trưởng phòng chuyên môn",
+      "Id": 151,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "148",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "TRUONG_PHONG_THAM_MUU",
+      "TenMuc": "Trưởng phòng tham mưu",
+      "Id": 148,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "156",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "VAN_PHONG",
+      "TenMuc": "Văn phòng",
+      "Id": 156,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "147",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "VAN_THU",
+      "TenMuc": "Văn thư",
+      "Id": 147,
+      "UngDung": [],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "161",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "ViTriChucVuAd",
+      "TenMuc": "Quản lý vị trí chức vụ",
+      "Id": 161,
+      "UngDung": [
+        {
+          "id": 5,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    },
+    {
+      "primKey": "160",
+      "ThoiGianTao": "2025-03-07T08:28:52",
+      "ThoiGianCapNhat": "2025-03-27T12:19:11",
+      "TrangThaiDuLieu": {
+        "@type": "C_TrangThaiDuLieu",
+        "MaMuc": "02",
+        "TenMuc": "Chính Thức"
+      },
+      "MaMuc": "ViTriChucVuTV",
+      "TenMuc": "Vi trí chức vụ",
+      "Id": 160,
+      "UngDung": [
+        {
+          "id": 4,
+          "@type": "C_UngDung",
+          "MaMuc": "Test",
+          "TenMuc": "test"
+        }
+      ],
+      "TaiKhoanQuanTri": false
+    }
+  ]
+}

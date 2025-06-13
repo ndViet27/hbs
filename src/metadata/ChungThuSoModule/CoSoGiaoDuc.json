@@ -1,0 +1,310 @@
+{
+  "loaiDoiTuong": "t_co_so_giao_duc",
+  "tableHeaders": [
+    [
+      {
+        "key": "0",
+        "sortable": false,
+        "title": "",
+        "align": "center",
+        "value": "Chon",
+        "type": "select",
+        "class": "th-center td-center sticky-column",
+        "width": 60,
+        "rowspan": 2,
+        "style": "left: 0px;"
+      },
+      {
+        "key": "1",
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1 sticky-column",
+        "width": 50,
+        "rowspan": 2,
+        "style": "left: 60px;"
+      },
+      {
+        "key": "2",
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "CoSoGiaoDuc",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center sticky-column",
+        "colspan": 2,
+        "width": 200,
+        "isParent": true,
+        "style": "left: 110px;"
+      },
+      {
+        "key": "3",
+        "sortable": false,
+        "title": "Thông tin chứng thư số",
+        "align": "center",
+        "value": "",
+        "type": "ThongTinChungThuSo",
+        "class": "th-center",
+        "colspan": 6,
+        "isParent": true
+      },
+      {
+        "key": "4",
+        "sortable": false,
+        "title": "Ngày đăng ký",
+        "align": "center",
+        "value": "thoi_gian_dang_ky",
+        "type": "datetime",
+        "class": "th-center text-center",
+        "width": 130,
+        "rowspan": 2
+      },
+      {
+        "key": "5",
+        "sortable": false,
+        "title": "Ngày duyệt",
+        "align": "center",
+        "value": "ngay_duyet_chung_thu_so",
+        "type": "datetime",
+        "class": "th-center text-center",
+        "width": 130,
+        "rowspan": 2
+      },
+      {
+        "key": "6",
+        "sortable": false,
+        "title": "Trạng thái",
+        "align": "center",
+        "value": "trang_thai_chung_thu_id",
+        "type": "TrangThaiChungThu",
+        "class": "th-center text-center",
+        "width": 150,
+        "rowspan": 2
+      },
+      {
+        "key": "7",
+        "sortable": false,
+        "title": "Ghi chú",
+        "align": "center",
+        "value": "ghi_chu",
+        "type": "text",
+        "class": "th-center text-left",
+        "width": 120,
+        "rowspan": 2
+      }
+    ],
+    [
+      {
+        "key": "2.1",
+        "sortable": false,
+        "title": "Mã cơ sở",
+        "align": "center",
+        "value": "doi_tuong_thue_bao.doi_tuong_thue_bao_id",
+        "class": "th-center text-center sticky-column",
+        "width": 120,
+        "style": "left: 110px;"
+      },
+      {
+        "key": "2.2",
+        "sortable": false,
+        "title": "Tên cơ sở",
+        "align": "center",
+        "value": "doi_tuong_thue_bao.ten_doi_tuong_thue_bao",
+        "class": "th-center text-left sticky-column",
+        "width": 150,
+        "style": "left: 230px;"
+      },
+      {
+        "key": "3.1",
+        "sortable": false,
+        "title": "Ngày hiệu lực",
+        "align": "center",
+        "value": "thong_tin_chung_thu.valid_from",
+        "type": "date",
+        "class": "th-center text-center",
+        "width": 130
+      },
+      {
+        "key": "3.2",
+        "sortable": false,
+        "title": "Ngày hết hạn",
+        "align": "center",
+        "value": "thong_tin_chung_thu.valid_to",
+        "type": "date",
+        "class": "th-center text-center",
+        "width": 130
+      },
+      {
+        "key": "3.3",
+        "sortable": false,
+        "title": "Tệp chứng thư",
+        "align": "center",
+        "value": "FileChungThuSo",
+        "type": "FileChungThuSo",
+        "class": "th-center text-center",
+        "width": 120
+      },
+      {
+        "key": "3.4",
+        "sortable": false,
+        "title": "Nhà phát hành",
+        "align": "center",
+        "value": "thong_tin_chung_thu.x_509_issuer_name",
+        "class": "th-center",
+        "width": 120
+      },
+      {
+        "key": "3.5",
+        "sortable": false,
+        "title": "Kiểu chữ ký",
+        "align": "center",
+        "value": "thong_tin_chung_thu.kieu_chu_ky_id",
+        "class": "th-center",
+        "width": 120
+      },
+      {
+        "key": "3.6",
+        "sortable": false,
+        "title": "Serial của chứng thư",
+        "align": "center",
+        "value": "thong_tin_chung_thu.x_509_serial_number",
+        "class": "th-center",
+        "width": 120
+      }
+    ]
+  ],
+  "tableHeadersMobile": [
+    {
+      "key": "0",
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 40
+    },
+    {
+      "key": 1,
+      "align": "center",
+      "type": "ThongTinChungThuSo",
+      "title": "Thông tin chứng thư số",
+      "value": "ThongTinChungThuSo"
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=20",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "trangThaiChungThuId",
+      "title": "Trạng thái đăng ký",
+      "type": "select",
+      "itemText": "ten_trang_thai_chung_thu",
+      "itemValue": "trang_thai_chung_thu_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/danhmuc/1.0/filter",
+      "responseDataApi": "result",
+      "params": {
+        "page": 0,
+        "size": 20,
+        "keyword": "",
+        "orderFields": "ThoiGianTao",
+        "orderTypes": "desc",
+        "tenDanhMuc": "dm_trang_thai_chung_thu"
+      },
+      "mapping": "trang_thai_chung_thu_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true
+    },
+    {
+      "name": "ngayHetHan_TuNgay",
+      "nameTo": "ngayHetHan_DenNgay",
+      "title": "Ngày hết hạn",
+      "type": "daterange",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "ddmmyyyy, dd/mm/yyyy",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": "",
+      "autoEvent": ""
+    }
+  ],
+  "formSearchAdvance": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=20",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "trangThaiChungThuId",
+      "title": "Trạng thái đăng ký",
+      "type": "select",
+      "itemText": "ten_trang_thai_chung_thu",
+      "itemValue": "trang_thai_chung_thu_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/danhmuc/1.0/filter",
+      "responseDataApi": "result",
+      "params": {
+        "page": 0,
+        "size": 20,
+        "keyword": "",
+        "orderFields": "ThoiGianTao",
+        "orderTypes": "desc",
+        "tenDanhMuc": "dm_trang_thai_chung_thu"
+      },
+      "mapping": "trang_thai_chung_thu_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true
+    },
+    {
+      "name": "ngayHetHan_TuNgay",
+      "nameTo": "ngayHetHan_DenNgay",
+      "title": "Ngày hết hạn",
+      "type": "daterange",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "ddmmyyyy, dd/mm/yyyy",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": "",
+      "autoEvent": ""
+    }
+  ]
+}

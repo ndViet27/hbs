@@ -1,0 +1,114 @@
+{
+  "title": "Danh sách tài khoản hệ thống",
+  "collection": "quanlytaikhoan",
+  "type": "taikhoanhethong",
+  "placeHolderSearch": "Nhập tên tài khoản, từ khóa tìm kiếm ...",
+  "tableHeaders": [
+    {
+      "key": 0,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "Client ID",
+      "align": "center",
+      "value": "client_id",
+      "type": "text",
+      "class": "th-left",
+      "width": 150
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Client Key",
+      "align": "center",
+      "value": "client_key",
+      "type": "text",
+      "class": "th-left",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "th-center text-center",
+      "width": 120
+    }
+  ],
+  "tableheadersMobile": [
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "Client ID",
+      "align": "center",
+      "value": "client_id",
+      "type": "text",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "td-center",
+      "width": 150
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "vaiTro_MaMuc",
+      "title": "Vai trò",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+      "responseDataApi": "content",
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "TaiKhoanQuanTri",
+      "title": "Tài khoản quản trị",
+      "type": "checkbox",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "autoEvent": ""
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "client_id": "ID_taikhoanhethong_1",
+      "client_key": "1116603643379054156616251184299847956788"
+    }
+  ]
+}

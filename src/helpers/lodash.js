@@ -1,0 +1,9 @@
+export { default as cloneDeep } from 'lodash/cloneDeep';
+export { default as omit } from 'lodash/omit';
+export { default as isEmpty } from 'lodash/isEmpty';
+export { default as isArray } from 'lodash/isArray';
+export { default as isObject } from 'lodash/isObject';
+export { default as isString } from 'lodash/isString';
+export { default as isNumber } from 'lodash/isNumber';
+export { default as isBoolean } from 'lodash/isBoolean';
+export { default as isFunction } from 'lodash/isFunction';

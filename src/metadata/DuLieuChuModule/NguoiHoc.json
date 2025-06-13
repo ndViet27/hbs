@@ -1,0 +1,204 @@
+{
+  "title": "Danh sách người học",
+  "loaiDoiTuong": "",
+  "tableHeaders": [
+    {
+      "key": "0",
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center sticky-column",
+      "width": 36,
+      "style": "left: 0px;"
+    },
+    {
+      "key": "1",
+      "sortable": false,
+      "title": "Mã định danh MOET",
+      "align": "center",
+      "value": "MaMOET",
+      "type": "text",
+      "class": "th-start td-center py-1 sticky-column",
+      "width": 93,
+      "style": "left: 60px;"
+    },
+    {
+      "key": "2",
+      "sortable": false,
+      "title": "Họ và tên",
+      "align": "center",
+      "value": "HoVaTen",
+      "type": "text",
+      "class": "th-start sticky-column",
+      "width": 124
+    },
+    {
+      "key": "3",
+      "sortable": false,
+      "title": "Ngày sinh",
+      "align": "center",
+      "value": "NgaySinh",
+      "type": "text",
+      "class": "th-start",
+      "width": 91
+    },
+    {
+      "key": "4",
+      "sortable": false,
+      "title": "Giới tính",
+      "align": "center",
+      "value": "GioiTinh",
+      "type": "text",
+      "class": "th-start ",
+      "width": 71
+    },
+    {
+      "key": "5",
+      "sortable": false,
+      "title": "Diện chính sách ưu tiên",
+      "align": "center",
+      "value": "DienChinhSachUuTien",
+      "type": "text",
+      "class": "th-start",
+      "width": 172
+    },
+    {
+      "key": "6",
+      "sortable": false,
+      "title": "Cấp học",
+      "align": "center",
+      "value": "CapHoc",
+      "type": "text",
+      "class": "th-start ",
+      "width": 82
+    },
+    {
+      "key": "7",
+      "sortable": false,
+      "title": "Cấp bậc trình độ đào tạo cao nhất đã hoàn thành",
+      "align": "center",
+      "value": "CapBacTrinhDoDaoTao",
+      "type": "text",
+      "class": "th-start ",
+      "width": 179
+    },
+    {
+      "key": "8",
+      "sortable": false,
+      "title": "Nơi đang theo học",
+      "align": "center",
+      "value": "NoiDangTheoHoc",
+      "type": "text",
+      "class": "th-start ",
+      "width": 142
+    },
+    {
+      "key": "9",
+      "sortable": false,
+      "title": "Trạng thái học tập",
+      "align": "center",
+      "value": "TrangThaiHocTap",
+      "type": "text",
+      "class": "th-start ",
+      "width": 90
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "primKey": 1231232131,
+      "MaMOET": "1234566",
+      "HoVaTen": "Nguyễn Hương Giang",
+      "NgaySinh": "24/12/2016",
+      "GioiTinh": "2006",
+      "DienChinhSachUuTien": "123",
+      "CapHoc": "Tiểu học",
+      "CapBacTrinhDoDaoTao": "Đang hoạt động",
+      "NoiDangTheoHoc": "Đang hoạt động",
+      "TrangThaiHocTap": "123"
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "DienChinhSachUuTien",
+      "title": "Diện chính sách ưu tiên",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "CapHoc",
+      "title": "Cấp học",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "CapBacDaoTao",
+      "title": "Cấp bậc trình độ đào tạo cao nhất đã hoàn thành",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "NoiDangTheoHoc",
+      "title": "Nơi đang theo học",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "TrangThaiHocTap",
+      "title": "Trạng thái học tập",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    }
+  ]
+}

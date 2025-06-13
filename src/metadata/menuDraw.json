@@ -1,0 +1,461 @@
+{
+  "menuDraw": [
+    {
+      "icon": "mdi-lock-outline",
+      "title": "Chứng thư số",
+      "class": "chungthu-tab",
+      "id": "chungthu-tab-id",
+      "to": "",
+      "visible": true,
+      "children": [
+        {
+          "icon": "",
+          "title": "Duyệt chứng thư số Cơ sở giáo dục",
+          "class": "csgd-chungthu-tab",
+          "id": "csgd-chungthu-tab-id",
+          "to": "/chung-thu-so-co-so-giao-duc",
+          "moduleName": "ChungThuSoModule",
+          "moduleType": "CoSoGiaoDuc",
+          "moduleParams": {
+            "type": "all",
+            "status": "pending"
+          }
+        },
+        {
+          "icon": "",
+          "title": "Duyệt chứng thư số Cán bộ quản lý",
+          "class": "cbql-chungthu-tab",
+          "id": "cbql-chungthu-tab-id",
+          "to": "/chung-thu-so-can-bo-quan-ly",
+          "moduleName": "ChungThuSoModule",
+          "moduleType": "CanBoQuanLy",
+          "moduleParams": {
+            "type": "all",
+            "status": "approved"
+          }
+        }
+      ]
+    },
+    {
+      "icon": "mdi-database",
+      "title": "Dữ liệu chủ",
+      "class": "dulieu-chu-tab",
+      "id": "dulieu-chu-tab-id",
+      "to": "",
+      "visible": true,
+      "children": [
+        {
+          "icon": "",
+          "title": "Cơ quan quản lý",
+          "class": "coquan-quanly-tab",
+          "id": "coquan-quanly-tab-id",
+          "to": "/co-quan-quan-ly",
+          "moduleName": "CoQuanQuanLy",
+          "moduleType": "CoQuanQuanLy"
+        },
+        {
+          "icon": "",
+          "title": "Cơ sở giáo dục",
+          "class": "coso-giaoduc-tab",
+          "id": "coso-giaoduc-tab-id",
+          "to": "/co-so-giao-duc",
+          "moduleName": "CoSoGiaoDuc",
+          "moduleType": "CoSoGiaoDuc"
+        },
+        {
+          "icon": "",
+          "title": "Người học",
+          "class": "nguoi-hoc-tab",
+          "id": "nguoi-hoc-tab-id",
+          "to": "/nguoi-hoc",
+          "moduleName": "NguoiHoc",
+          "moduleType": "NguoiHoc"
+        },
+        {
+          "icon": "",
+          "title": "Nhà giáo, cán bộ quản lý",
+          "class": "nhagiao-canbo-tab",
+          "id": "nhagiao-canbo-tab-id",
+          "to": "/nha-giao-can-bo",
+          "moduleName": "NhaGiaoCanBo",
+          "moduleType": "NhaGiaoCanBo"
+        }
+      ]
+    },
+    {
+      "icon": "mdi-school",
+      "title": "Dữ liệu giáo dục",
+      "class": "dulieu-giaoduc-tab",
+      "id": "dulieu-giaoduc-tab-id",
+      "to": "",
+      "visible": false,
+      "children": [
+        {
+          "icon": "",
+          "title": "Học bạ",
+          "class": "hoc-ba-tab",
+          "id": "hoc-ba-tab-id",
+          "to": "/hoc-ba",
+          "moduleName": "HocBa"
+        },
+        {
+          "icon": "",
+          "title": "Văn bằng chứng chỉ",
+          "class": "vanbang-chungchi-tab",
+          "id": "vanbang-chungchi-tab-id",
+          "to": "/van-bang-chung-chi",
+          "moduleName": "VanBangChungChi"
+        },
+        {
+          "icon": "",
+          "title": "Chứng nhận kết quả thi",
+          "class": "chungnhan-ketqua-tab",
+          "id": "chungnhan-ketqua-tab-id",
+          "to": "/chung-nhan-ket-qua-thi",
+          "moduleName": "ChungNhanKetQuaThi"
+        },
+        {
+          "icon": "",
+          "title": "Chứng nhận thành tích",
+          "class": "chungnhan-thanhtich-tab",
+          "id": "chungnhan-thanhtich-tab-id",
+          "to": "/chung-nhan-thanh-tich",
+          "moduleName": "ChungNhanThanhTich"
+        },
+        {
+          "icon": "",
+          "title": "Kế hoạch tuyển sinh",
+          "class": "kehoach-tuyensinh-tab",
+          "id": "kehoach-tuyensinh-tab-id",
+          "to": "/ke-hoach-tuyen-sinh",
+          "moduleName": "KeHoachTuyenSinh"
+        }
+      ]
+    },
+    {
+      "icon": "mdi-newspaper-variant-outline",
+      "title": "Bản tin dữ liệu",
+      "class": "bantin-dulieu-tab",
+      "id": "bantin-dulieu-tab-id",
+      "to": "",
+      "visible": true,
+      "children": [
+        {
+          "icon": "",
+          "title": "Đăng ký tạo học bạ",
+          "class": "bantin-dangky-tab",
+          "id": "bantin-dangky-tab-id",
+          "to": "/ban-tin-dang-ky-tao-hoc-ba",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "DangKyTaoHocBa",
+          "moduleParams": {
+            "type": "DangKyTaoHocBa",
+            "status": "pending"
+          },
+          "visible": true
+        },
+        {
+          "icon": "",
+          "title": "Thu hồi học bạ",
+          "class": "bantin-thuhoi-tab",
+          "id": "bantin-thuhoi-tab-id",
+          "to": "/ban-tin-thu-hoi-hoc-ba",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "ThuHoiHocBa",
+          "moduleParams": {
+            "type": "ThuHoiHocBa"
+          },
+          "visible": true
+        },
+        {
+          "icon": "",
+          "title": "Cơ sở giáo dục",
+          "class": "bantin-coso-tab",
+          "id": "bantin-coso-tab-id",
+          "to": "/ban-tin-co-so-giao-duc",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "CoSoGiaoDuc"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Kế hoạch tuyển sinh",
+          "class": "bantin-kehoach-tab",
+          "id": "bantin-kehoach-tab-id",
+          "to": "/ban-tin-ke-hoach-tuyen-sinh",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "KeHoachTuyenSinh"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Người học",
+          "class": "bantin-nguoihoc-tab",
+          "id": "bantin-nguoihoc-tab-id",
+          "to": "/ban-tin-nguoi-hoc",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "NguoiHoc"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Quá trình học tập",
+          "class": "bantin-quatrinh-tab",
+          "id": "bantin-quatrinh-tab-id",
+          "to": "/ban-tin-qua-trinh-hoc-tap",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "QuaTrinhHocTap"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Học bạ",
+          "class": "bantin-hocba-tab",
+          "id": "bantin-hocba-tab-id",
+          "to": "/ban-tin-hoc-ba",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "HocBa"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Văn bằng chứng chỉ",
+          "class": "bantin-vanbang-tab",
+          "id": "bantin-vanbang-tab-id",
+          "to": "/ban-tin-van-bang-chung-chi",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "VanBangChungChi"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Chứng nhận kết quả thi",
+          "class": "bantin-chungnhan-tab",
+          "id": "bantin-chungnhan-tab-id",
+          "to": "/ban-tin-chung-nhan-ket-qua-thi",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "ChungNhanKetQuaThi"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Chứng nhận thành tích",
+          "class": "bantin-thanhtich-tab",
+          "id": "bantin-thanhtich-tab-id",
+          "to": "/ban-tin-chung-nhan-thanh-tich",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "ChungNhanThanhTich"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Nhà giáo cán bộ",
+          "class": "bantin-nhagiao-tab",
+          "id": "bantin-nhagiao-tab-id",
+          "to": "/ban-tin-nha-giao-can-bo",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "NhaGiaoCanBo"
+          },
+          "visible": false
+        },
+        {
+          "icon": "",
+          "title": "Quá trình công tác",
+          "class": "bantin-quatrinhct-tab",
+          "id": "bantin-quatrinhct-tab-id",
+          "to": "/ban-tin-qua-trinh-cong-tac",
+          "moduleName": "BanTinDuLieuModule",
+          "moduleType": "banTin",
+          "moduleParams": {
+            "type": "QuaTrinhCongTac"
+          },
+          "visible": false
+        }
+      ]
+    },
+    {
+      "icon": "mdi-school",
+      "title": "Dữ liệu học bạ số",
+      "class": "dulieu-hocba-so-tab",
+      "id": "dulieu-hocba-so-tab-id",
+      "to": "/dulieu-hoc-ba-so",
+      "moduleName": "HocBaModule",
+      "moduleType": "HocBa",
+      "moduleParams": {},
+      "visible": true
+    },
+    {
+      "icon": "mdi-chart-timeline-variant-shimmer",
+      "title": "Thống kê tổng hợp",
+      "class": "thongke-tonghop-tab",
+      "id": "thongke-tonghop-tab-id",
+      "to": "",
+      "visible": true,
+      "children": [
+        {
+          "icon": "",
+          "title": "Bản tin học bạ số",
+          "class": "thongke-bthb-tab",
+          "id": "thongke-bthb-tab-id",
+          "to": "/thong-ke-ban-tin-hoc-ba",
+          "moduleName": "StatisticsModule",
+          "moduleType": "BanTinHocBaSo",
+          "moduleParams": {
+            "type": "CoQuanQuanLy"
+          }
+        },
+        {
+          "icon": "",
+          "title": "Dữ liệu học bạ số",
+          "class": "thongke-dlhb-tab",
+          "id": "thongke-dlhb-tab-id",
+          "to": "/thong-ke-du-lieu-hoc-ba",
+          "moduleName": "StatisticsModule",
+          "moduleType": "DuLieuHocBaSo",
+          "moduleParams": {
+            "type": "CoQuanQuanLy"
+          }
+        }
+      ]
+    },
+    {
+      "icon": "mdi-clipboard-check-outline",
+      "title": "Kiểm duyệt dữ liệu",
+      "class": "kiemduyetdulieu-tab",
+      "id": "kiemduyetdulieu-tab-id",
+      "to": "",
+      "visible": false,
+      "children": [
+        {
+          "icon": "",
+          "title": "Chờ duyệt",
+          "class": "cho-duyet-tab",
+          "id": "cho-duyet-tab-id",
+          "to": "/cho-duyet",
+          "moduleName": "ApprovalModule",
+          "moduleType": "kiemDuyet",
+          "moduleParams": {
+            "type": "all",
+            "status": "pending"
+          }
+        },
+        {
+          "icon": "",
+          "title": "Đã duyệt",
+          "class": "da-duyet-tab",
+          "id": "da-duyet-tab-id",
+          "to": "/da-duyet",
+          "moduleName": "ApprovalModule",
+          "moduleType": "kiemDuyet",
+          "moduleParams": {
+            "type": "all",
+            "status": "approved"
+          }
+        },
+        {
+          "icon": "",
+          "title": "Từ chối duyệt",
+          "class": "tu-choi-duyet-tab",
+          "id": "tu-choi-duyet-tab-id",
+          "to": "/tu-choi-duyet",
+          "moduleName": "ApprovalModule",
+          "moduleType": "kiemDuyet",
+          "moduleParams": {
+            "type": "all",
+            "status": "rejected"
+          }
+        }
+      ]
+    },
+    {
+      "icon": "mdi-key-outline",
+      "title": "Mã MOET",
+      "class": "mamoet-tab",
+      "id": "mamoet-tab-id",
+      "to": "",
+      "visible": false,
+      "children": [
+        {
+          "icon": "",
+          "title": "Tra cứu mã MOET",
+          "class": "tracuu-mamoet-tab",
+          "id": "tracuu-mamoet-tab-id",
+          "to": "/tra-cuu-ma-moet",
+          "moduleName": "TraCuuMaMoet"
+        },
+        {
+          "icon": "",
+          "title": "Chờ kiểm tra xác thực",
+          "class": "chokt-xacthuc-tab",
+          "id": "chokt-xacthuc-tab-id",
+          "to": "/cho-kiem-tra-xac-thuc",
+          "moduleName": "ChoKiemTraXacThuc"
+        },
+        {
+          "icon": "",
+          "title": "Chờ cấp mã MOET",
+          "class": "chocap-mamoet-tab",
+          "id": "chocap-mamoet-tab-id",
+          "to": "/cho-cap-ma-moet",
+          "moduleName": "ChoCapMaMoet"
+        }
+      ]
+    },
+    {
+      "icon": "mdi-cog-outline",
+      "title": "Quản trị hệ thống",
+      "class": "qtht-tab",
+      "id": "qtht-tab-id",
+      "to": "",
+      "visible": true,
+      "children": [
+        {
+          "icon": "",
+          "title": "Tài khoản cấp đơn vị",
+          "class": "taikhoancapdonvi-tab",
+          "id": "taikhoancapdonvi-tab-id",
+          "to": "/tai-khoan-cap-don-vi",
+          "moduleName": "QuanTriHeThong",
+          "moduleType": "TaiKhoanCapDonVi",
+          "moduleParams": {}
+        },
+        {
+          "icon": "",
+          "title": "Tài khoản hệ thống",
+          "class": "taikhoanhethong-tab",
+          "id": "taikhoanhethong-tab-id",
+          "to": "/tai-khoan-he-thong",
+          "moduleName": "QuanTriHeThong",
+          "moduleType": "TaiKhoanHeThong",
+          "moduleParams": {}
+        }
+      ]
+    }
+  ]
+}

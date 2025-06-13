@@ -1,0 +1,357 @@
+{
+  "tableHeaders": [
+    [
+      {
+        "key": "0",
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1 sticky-column",
+        "width": 50,
+        "rowspan": 2,
+        "style": "left: 0px;"
+      },
+      {
+        "key": "1",
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "ban_tin_yeu_cau.noi_tao_ban_tin",
+        "class": "th-center sticky-column",
+        "colspan": 2,
+        "width": 200,
+        "isParent": true,
+        "style": "left: 50px;"
+      },
+      {
+        "key": "2",
+        "sortable": false,
+        "title": "Học bạ",
+        "align": "center",
+        "type": "HocBa",
+        "class": "th-center text-center",
+        "colspan": 3,
+        "isParent": true
+      },
+      {
+        "key": "3",
+        "sortable": false,
+        "title": "Mã gói tin",
+        "align": "center",
+        "value": "ban_tin_yeu_cau.ban_tin_id",
+        "type": "MaGoiTin",
+        "class": "th-center",
+        "width": 300,
+        "rowspan": 2
+      },
+      {
+        "key": "4",
+        "sortable": false,
+        "title": "Thời gian",
+        "align": "center",
+        "value": "thoi_gian",
+        "type": "date",
+        "class": "th-center text-center text-block",
+        "colspan": 2,
+        "isParent": true
+      },
+      {
+        "key": "5",
+        "sortable": false,
+        "title": "Trạng thái \ngói tin",
+        "align": "center",
+        "value": "trang_thai_xu_ly_tin_id",
+        "type": "TrangThaiXuLyTin",
+        "class": "th-center text-left text-block",
+        "width": 120,
+        "rowspan": 2
+      },
+      {
+        "key": "6",
+        "value": "action",
+        "sortable": false,
+        "title": "Xem gói tin",
+        "align": "center",
+        "type": "action",
+        "class": "th-center text-left",
+        "width": 70,
+        "rowspan": 2
+      }
+    ],
+    [
+      {
+        "key": "1.1",
+        "sortable": false,
+        "title": "Mã cơ sở",
+        "align": "center",
+        "value": "ban_tin_yeu_cau.noi_tao_ban_tin.co_quan_don_vi_id",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center text-center sticky-column",
+        "width": 120,
+        "style": "left: 50px;"
+      },
+      {
+        "key": "1.2",
+        "sortable": false,
+        "title": "Tên cơ sở",
+        "align": "center",
+        "value": "ban_tin_yeu_cau.noi_tao_ban_tin.ten_co_quan_don_vi",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center text-left sticky-column",
+        "width": 150,
+        "style": "left: 170px;"
+      },
+      {
+        "key": "2.1",
+        "sortable": false,
+        "title": "Tổng số",
+        "align": "center",
+        "value": "tong_so",
+        "class": "th-center text-center",
+        "width": 70
+      },
+      {
+        "key": "2.2",
+        "sortable": false,
+        "title": "Số lượng \nduyệt",
+        "align": "center",
+        "value": "duyet",
+        "class": "th-center text-center text-block",
+        "width": 70
+      },
+      {
+        "key": "2.3",
+        "sortable": false,
+        "title": "Số lượng \ntừ chối",
+        "align": "center",
+        "value": "tu_choi",
+        "class": "th-center text-center text-block",
+        "width": 70
+      },
+      {
+        "key": "4.1",
+        "sortable": false,
+        "title": "Yêu cầu",
+        "align": "center",
+        "value": "thoi_gian_yeu_cau",
+        "type": "datetime",
+        "class": "th-center text-center",
+        "width": 120
+      },
+      {
+        "key": "4.2",
+        "sortable": false,
+        "title": "Trả lời ",
+        "align": "center",
+        "value": "thoi_gian_tra_loi",
+        "type": "datetime",
+        "class": "th-center text-center",
+        "width": 120
+      }
+    ]
+  ],
+  "tableHeadersDoing": [
+    [
+      {
+        "key": "0",
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1",
+        "width": 50,
+        "rowspan": 2
+      },
+      {
+        "key": "1",
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "CoSoGiaoDuc",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center",
+        "colspan": 2,
+        "width": 200,
+        "isParent": true
+      },
+      {
+        "key": "2",
+        "sortable": false,
+        "title": "Thời gian tạo yêu cầu",
+        "align": "center",
+        "value": "thoi_gian_yeu_cau",
+        "type": "date",
+        "class": "th-center text-center",
+        "rowspan": 2,
+        "width": 120
+      },
+      {
+        "key": "4",
+        "sortable": false,
+        "title": "Mã gói tin",
+        "align": "center",
+        "value": "ban_tin_id",
+        "type": "MaGoiTin",
+        "class": "th-center",
+        "width": 300,
+        "rowspan": 2
+      },
+      {
+        "key": "5",
+        "sortable": false,
+        "title": "Trạng thái gói tin",
+        "align": "center",
+        "value": "trang_thai_xu_ly_tin_id",
+        "type": "TrangThaiXuLyTin",
+        "class": "th-center text-center",
+        "width": 120,
+        "rowspan": 2
+      }
+    ],
+    [
+      {
+        "key": "1.1",
+        "sortable": false,
+        "title": "Mã cơ sở",
+        "align": "center",
+        "value": "co_quan_don_vi_id",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center text-center",
+        "width": 120
+      },
+      {
+        "key": "1.2",
+        "sortable": false,
+        "title": "Tên cơ sở",
+        "align": "center",
+        "value": "ten_co_quan_don_vi",
+        "type": "CoSoGiaoDuc",
+        "class": "th-center text-center",
+        "width": 120
+      }
+    ]
+  ],
+  "tableHeadersMobile": [
+    {
+      "key": "0",
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 40
+    },
+    {
+      "key": 1,
+      "align": "center",
+      "type": "ThongTinBanTin",
+      "title": "Thông tin bản tin",
+      "value": "ThongTinBanTin"
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=100",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "trangThaiXulyTinId",
+      "title": "Trạng thái xử lý tin",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "result",
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": {
+        "TenMuc": "Đã xử lý",
+        "MaMuc": "02,03,04"
+      },
+      "dataType": "",
+      "dataSource": [
+        {
+          "TenMuc": "Đã xử lý",
+          "MaMuc": "02,03,04"
+        },
+        {
+          "TenMuc": "Đang xử lý",
+          "MaMuc": "00,01"
+        }
+      ],
+      "autoEvent": "",
+      "clearable": true
+    }
+  ],
+  "formSearchAdvance": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=100",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "trangThaiXulyTinId",
+      "title": "Trạng thái xử lý tin",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "result",
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": {
+        "TenMuc": "Đã xử lý",
+        "MaMuc": "02,03,04"
+      },
+      "dataType": "",
+      "dataSource": [
+        {
+          "TenMuc": "Đã xử lý",
+          "MaMuc": "02,03,04"
+        },
+        {
+          "TenMuc": "Đang xử lý",
+          "MaMuc": "00,01"
+        }
+      ],
+      "autoEvent": "",
+      "clearable": true
+    }
+  ],
+  "params": {
+    "mucDichBanTin": "01",
+    "loaiDuLieuSoID": "01"
+  }
+}

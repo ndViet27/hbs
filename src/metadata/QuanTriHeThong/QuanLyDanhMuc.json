@@ -1,0 +1,310 @@
+{
+  "title": "Danh sách danh mục",
+  "collection": "quanlydanhmuc",
+  "placeHolderSearch": "Nhập tên danh mục, từ khóa tìm kiếm ...",
+  "tableHeaders": [
+    {
+      "key": 0,
+      "sortable": false,
+      "title": "",
+      "align": "center",
+      "value": "",
+      "type": "checkbox",
+      "class": "th-center verticalAlignTop",
+      "width": 70
+    },
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center verticalAlignTop td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Tên đăng nhập",
+      "align": "center",
+      "value": "TenDangNhap",
+      "type": "text",
+      "class": "th-center text-center verticalAlignTop",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "sortable": false,
+      "title": "Tên tài khoản",
+      "align": "center",
+      "value": "TenTaiKhoan",
+      "type": "text",
+      "class": "th-center text-center verticalAlignTop",
+      "width": 150
+    },
+    {
+      "key": 4,
+      "sortable": false,
+      "title": "Tình trạng sử dụng tài khoản",
+      "align": "center",
+      "value": "TinhTrangSuDungTaiKhoan",
+      "type": "object",
+      "mapping": "TenMuc",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 5,
+      "sortable": false,
+      "title": "Tài khoản quản trị",
+      "align": "center",
+      "value": "TaiKhoanQuanTri",
+      "type": "boolean",
+      "class": "th-center text-center",
+      "width": 150
+    },
+    {
+      "key": 6,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "th-center text-center",
+      "width": 120
+    }
+  ],
+  "tableheadersMobile": [
+    {
+      "key": 0,
+      "sortable": false,
+      "title": "",
+      "align": "center",
+      "value": "",
+      "type": "checkbox",
+      "class": "th-center verticalAlignTop",
+      "width": 70
+    },
+    {
+      "key": 1,
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center verticalAlignTop td-center py-1",
+      "width": 50
+    },
+    {
+      "key": 2,
+      "sortable": false,
+      "title": "Tên đăng nhập",
+      "align": "center",
+      "value": "TenDangNhap",
+      "type": "text",
+      "class": "th-center verticalAlignTop",
+      "width": 150
+    },
+    {
+      "key": 3,
+      "value": "action",
+      "sortable": false,
+      "title": "Thao tác",
+      "align": "center",
+      "type": "action",
+      "class": "td-center",
+      "width": 50
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "tenTaiKhoan",
+      "title": "Tên tài khoản",
+      "type": "textfield",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    }
+  ],
+  "create": {
+    "title": "Thêm mới tài khoản người dùng",
+    "formCreate": [
+      {
+        "fieldName": "TenCanBo",
+        "fieldLabel": "Tên cán bộ",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TenTaiKhoan",
+        "fieldLabel": "Tên tài khoản",
+        "fieldType": "text",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TinhTrangSuDungTaiKhoan",
+        "fieldLabel": "Tình trạng sử dụng",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldType": "select",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": null,
+        "dataType": "",
+        "api": "",
+        "responseDataApi": "content",
+        "params": {
+          "page": 0,
+          "size": 100
+        },
+        "dataSource": [
+          {
+            "TenMuc": "Đang sử dụng",
+            "MaMuc": "01"
+          },
+          {
+            "TenMuc": "Chưa kích hoạt",
+            "MaMuc": "02"
+          }
+        ],
+        "autoEvent": "",
+        "required": true,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "ThuDienTu",
+        "fieldLabel": "Thư điện tử",
+        "fieldType": "email",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      },
+      {
+        "fieldName": "TaiKhoanQuanTri",
+        "fieldLabel": "Tài khoản quản trị",
+        "fieldType": "checkbox",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": "",
+        "autoEvent": "",
+        "required": false,
+        "rules": [],
+        "readonly": false
+      }
+    ]
+  },
+  "detail": {
+    "title": "Chi tiết tài khoản người dùng",
+    "formInfo": [
+      {
+        "label": "Tên đăng nhập",
+        "value": "TenDangNhap",
+        "type": "text"
+      },
+      {
+        "label": "Tên tài khoản",
+        "value": "TenTaiKhoan",
+        "type": "text"
+      },
+      {
+        "label": "Thư điện tử",
+        "value": "ThuDienTu",
+        "type": "text"
+      },
+      {
+        "label": "Tình trạng sử dụng tài khoản",
+        "value": "TinhTrangSuDungTaiKhoan",
+        "type": "object",
+        "mapping": "TenMuc"
+      },
+      {
+        "label": "Tài khoản quản trị",
+        "value": "TaiKhoanQuanTri",
+        "type": "boolean"
+      }
+    ],
+    "formUpdate": []
+  },
+  "tempDanhMuc": [
+    {
+      "MaMuc": 1,
+      "TenMuc": "Danh mục cơ quan quản lý"
+    },
+    {
+      "MaMuc": 2,
+      "TenMuc": "Danh mục cơ sở giáo dục"
+    },
+    {
+      "MaMuc": 3,
+      "TenMuc": "Danh mục cấp học"
+    },
+    {
+      "MaMuc": 4,
+      "TenMuc": "Danh mục môn học"
+    },
+    {
+      "MaMuc": 5,
+      "TenMuc": "Danh mục ví dụ 1"
+    },
+    {
+      "MaMuc": 6,
+      "TenMuc": "Danh mục ví dụ 2"
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "TenDangNhap": "tendangnhap1",
+      "TenTaiKhoan": "tentaikhoan1",
+      "TinhTrangSuDungTaiKhoan": {
+        "TenMuc": "Đang sử dụng",
+        "MaMuc": "01"
+      },
+      "TaiKhoanQuanTri": true,
+      "id": 1,
+      "primKey": 3132341333123,
+      "PhanVungDuLieu": {
+        "TenMuc": "Bộ giáo dục",
+        "MaDinhDanh": "BGD-001"
+      },
+      "VaiTro": [
+        {
+          "TenMuc": "Bộ trưởng",
+          "MaMuc": "001"
+        }
+      ],
+      "TrangThaiDuLieu": {
+        "TenMuc": "Chính thức",
+        "MaMuc": "02"
+      }
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "tableHeaders": [
+    [
+      {
+        "key": "0",
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1",
+        "width": 50,
+        "rowspan": 2
+      },
+      {
+        "key": "1",
+        "sortable": false,
+        "title": "Thông tin học sinh",
+        "align": "center",
+        "value": "",
+        "class": "th-center",
+        "colspan": 3,
+        "isParent": true
+      },
+      {
+        "key": "2",
+        "sortable": false,
+        "title": "Năm học",
+        "align": "center",
+        "value": "namhoc",
+        "type": "NamHoc",
+        "class": "th-center text-center",
+        "width": 100,
+        "rowspan": 2
+      },
+      {
+        "key": "3",
+        "sortable": false,
+        "title": "Lớp học",
+        "align": "center",
+        "value": "ten_lop_hoc",
+        "class": "th-center text-center",
+        "width": 70,
+        "rowspan": 2
+      },
+      {
+        "key": "4",
+        "sortable": false,
+        "title": "Cơ sở giáo dục",
+        "align": "center",
+        "value": "co_so_giao_duc.ten_co_so_giao_duc",
+        "class": "th-center",
+        "rowspan": 2
+      },
+      {
+        "key": "5",
+        "sortable": false,
+        "title": "Mã tra cứu học bạ số",
+        "align": "center",
+        "value": "hoc_ba_id",
+        "class": "th-center",
+        "rowspan": 2
+      },
+      {
+        "key": "6",
+        "sortable": false,
+        "title": "Trạng thái",
+        "align": "center",
+        "value": "is_co_hieu_luc",
+        "type": "TrangThaiHocBa",
+        "class": "th-center td-center",
+        "rowspan": 2
+      },
+      {
+        "key": "7",
+        "value": "action",
+        "sortable": false,
+        "title": "Xem học bạ",
+        "align": "center",
+        "type": "action",
+        "class": "th-center",
+        "width": 100,
+        "rowspan": 2
+      }
+    ],
+    [
+      {
+        "key": "1.1",
+        "sortable": false,
+        "title": "Mã học sinh",
+        "align": "center",
+        "value": "nguoi_hoc.nguoi_hoc_id",
+        "type": "MaHocSinh",
+        "class": "th-center text-center"
+      },
+      {
+        "key": "1.2",
+        "sortable": false,
+        "title": "Họ và tên",
+        "align": "center",
+        "value": "nguoi_hoc.ho_va_ten",
+        "class": "th-center text-left",
+        "width": 180
+      },
+      {
+        "key": "1.3",
+        "sortable": false,
+        "title": "Ngày sinh",
+        "align": "center",
+        "value": "nguoi_hoc.ngay_sinh",
+        "type": "date",
+        "class": "th-center text-center"
+      }
+    ]
+  ],
+  "tableHeadersMobile": [
+    {
+      "key": "0",
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center py-1",
+      "width": 40
+    },
+    {
+      "key": 1,
+      "align": "center",
+      "type": "ThongTinHocBa",
+      "title": "Thông tin học bạ",
+      "value": "ThongTinHocBa"
+    }
+  ],
+  "formSearch": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=100",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "namHoc_TuNam",
+      "nameTo": "namHoc_DenNam",
+      "title": "Năm học",
+      "type": "yearrange",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": "",
+      "autoEvent": "",
+      "isDisableToField": true,
+      "yearFromPlaceholder": "Năm bắt đầu",
+      "yearToPlaceholder": "Năm kết thúc"
+    },
+    {
+      "name": "capHocId",
+      "title": "Cấp học",
+      "type": "select",
+      "itemText": "ten_cap_hoc",
+      "itemValue": "cap_hoc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/danhmuc/1.0/filter",
+      "responseDataApi": "result",
+      "mapping": "cap_hoc_id",
+      "placeHolder": "",
+      "params": {
+        "page": 0,
+        "size": 20,
+        "keyword": "",
+        "tenDanhMuc": "dm_cap_hoc"
+      },
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "tenLopHoc",
+      "title": "Lớp học",
+      "type": "textfield",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "defaultValue": "",
+      "dataType": "",
+      "autoEvent": ""
+    },
+    {
+      "name": "isCoHieuLuc",
+      "title": "Trạng thái học bạ",
+      "type": "select",
+      "itemText": "ten_trang_thai_hoc_ba",
+      "itemValue": "trang_thai_hoc_ba_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "params": {},
+      "mapping": "trang_thai_hoc_ba_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [
+        {
+          "trang_thai_hoc_ba_id": 1,
+          "ten_trang_thai_hoc_ba": "Đang lưu hành"
+        },
+        {
+          "trang_thai_hoc_ba_id": 0,
+          "ten_trang_thai_hoc_ba": "Đã thu hồi"
+        }
+      ],
+      "autoEvent": "",
+      "clearable": true
+    }
+  ],
+  "formSearchAdvance": [
+    {
+      "name": "coSoGiaoDucId",
+      "title": "Cơ sở giáo dục",
+      "type": "select",
+      "itemText": "ten_co_so_giao_duc",
+      "itemValue": "co_so_giao_duc_id",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/dulieuchu/tracuu/internal/cosogiaoduc/1.0/filter?page=0&size=100",
+      "responseDataApi": "result",
+      "mapping": "co_so_giao_duc_id",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": "",
+      "clearable": true,
+      "keySearch": "keyword"
+    },
+    {
+      "name": "namHoc",
+      "title": "Năm học",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+      "responseDataApi": "content",
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "lop",
+      "title": "Lớp",
+      "type": "text",
+      "fieldClass": "v-col-xs-12 v-col-3",
+      "defaultValue": "",
+      "dataType": "",
+      "autoEvent": ""
+    },
+    {
+      "name": "trangThaiHocBa_MaMuc",
+      "title": "Trạng thái học bạ",
+      "type": "select",
+      "itemText": "TenMuc",
+      "itemValue": "MaMuc",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "params": {},
+      "mapping": "MaMuc",
+      "placeHolder": "",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [
+        {
+          "MaMuc": 1,
+          "TenMuc": "Đang lưu hành"
+        },
+        {
+          "MaMuc": 0,
+          "TenMuc": "Đã thu hồi"
+        }
+      ],
+      "autoEvent": ""
+    }
+  ]
+}

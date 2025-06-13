@@ -1,0 +1,162 @@
+{
+  "tableConfig": {
+    "headers": [
+      {
+        "key": 0,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "th-center td-center py-1",
+        "width": 50
+      },
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "Số chứng chỉ",
+        "align": "center",
+        "value": "SoChungChi",
+        "type": "SoChungChi",
+        "class": "th-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 2,
+        "sortable": false,
+        "title": "Ngày cấp",
+        "align": "center",
+        "value": "NgayCap",
+        "type": "NgayCap",
+        "class": "th-center verticalAlignTop",
+        "width": 150
+      },
+      {
+        "key": 3,
+        "sortable": false,
+        "title": "Loại phương tiện",
+        "align": "center",
+        "value": "LoaiPhuongTien.TenMuc",
+        "type": "LoaiPhuongTien",
+        "class": "th-center"
+      },
+      {
+        "key": 4,
+        "sortable": false,
+        "title": "Nhãn hiệu",
+        "align": "center",
+        "value": "NhanHieu",
+        "class": "th-center"
+      },
+      {
+        "key": 5,
+        "sortable": false,
+        "title": "Tên thương mại",
+        "align": "center",
+        "value": "TenThươngMại",
+        "class": "th-center"
+      },
+      {
+        "key": 6,
+        "sortable": false,
+        "title": "Mã kiểu loại",
+        "align": "center",
+        "value": "MaKieuLoai",
+        "class": "th-center"
+      },
+      {
+        "key": 7,
+        "sortable": false,
+        "title": "Trạng thái",
+        "align": "center",
+        "value": "TrangThaiHoSo.TenMuc",
+        "class": "th-center",
+        "width": 150
+      }
+    ],
+    "headersMobile": [
+      {
+        "key": 0,
+        "sortable": false,
+        "title": "STT",
+        "align": "center",
+        "value": "stt",
+        "type": "index",
+        "class": "td-center verticalAlignTop py-1",
+        "width": 50
+      },
+      {
+        "key": 1,
+        "sortable": false,
+        "title": "Thông tin chứng chỉ",
+        "align": "center",
+        "value": "ThongTinChungChi",
+        "class": "td-left verticalAlignTop"
+      }
+    ],
+    "formSearch": [
+      {
+        "name": "soHoSo",
+        "title": "Số hồ sơ",
+        "type": "textfield",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "Nhập số hồ sơ",
+        "defaultValue": "",
+        "dataType": "",
+        "autoEvent": ""
+      },
+      {
+        "name": "soDangKyKiemTra",
+        "title": "Số đăng ký kiểm tra",
+        "type": "textfield",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "Nhập số đăng ký kiểm tra",
+        "defaultValue": "",
+        "dataType": "",
+        "autoEvent": ""
+      },
+      {
+        "name": "loaiPhuongTien_MaMuc",
+        "title": "Loại phương tiện",
+        "type": "select",
+        "itemText": "TenMuc",
+        "itemValue": "MaMuc",
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "api": "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+        "responseDataApi": "content",
+        "mapping": "MaMuc",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      },
+      {
+        "name": "ngayNopHoSo_TuNgay",
+        "nameTo": "ngayNopHoSo_DenNgay",
+        "title": "Ngày nộp hồ sơ",
+        "type": "daterange",
+        "multiple": false,
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      },
+      {
+        "name": "ngayDangKyKiemTra_TuNgay",
+        "nameTo": "ngayDangKyKiemTra_DenNgay",
+        "title": "Ngày đăng ký kiểm tra",
+        "type": "daterange",
+        "multiple": false,
+        "fieldClass": "v-col-xs-12 v-col-4",
+        "placeHolder": "",
+        "defaultValue": "",
+        "dataType": "",
+        "dataSource": [],
+        "autoEvent": ""
+      }
+    ]
+  }
+}

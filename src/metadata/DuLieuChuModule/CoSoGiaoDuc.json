@@ -1,0 +1,583 @@
+{
+  "title": "Danh sách cơ sở giáo dục",
+  "loaiDoiTuong": "",
+  "tableHeaders": [
+    {
+      "key": "0",
+      "sortable": false,
+      "title": "STT",
+      "align": "center",
+      "value": "stt",
+      "type": "index",
+      "class": "th-center td-center sticky-column",
+      "width": 36,
+      "style": "left: 0px;"
+    },
+    {
+      "key": "1",
+      "sortable": false,
+      "title": "Mã định danh",
+      "align": "center",
+      "value": "MaDinhDanh",
+      "type": "text",
+      "class": "th-start td-center py-1 sticky-column",
+      "width": 101,
+      "style": "left: 60px;"
+    },
+    {
+      "key": "2",
+      "sortable": false,
+      "title": "Tên cơ sở giáo dục",
+      "align": "center",
+      "value": "CoSoGiaoDuc",
+      "type": "text",
+      "class": "th-start sticky-column",
+      "width": 169
+    },
+    {
+      "key": "3",
+      "sortable": false,
+      "title": "Địa chỉ hoạt động chính",
+      "align": "center",
+      "value": "DiaChi",
+      "type": "text",
+      "class": "th-start",
+      "width": 180
+    },
+    {
+      "key": "4",
+      "sortable": false,
+      "title": "Năm thành lập",
+      "align": "center",
+      "value": "NamThanhLap",
+      "type": "text",
+      "class": "th-center ",
+      "width": 120
+    },
+    {
+      "key": "5",
+      "sortable": false,
+      "title": "Cơ quan quản lý",
+      "align": "center",
+      "value": "CoQuanQuanLy",
+      "type": "text",
+      "class": "th-start",
+      "width": 167
+    },
+    {
+      "key": "6",
+      "sortable": false,
+      "title": "Loại cơ sở giáo dục",
+      "align": "center",
+      "value": "LoaiCoSoGiaoDuc",
+      "type": "text",
+      "class": "th-start ",
+      "width": 152
+    },
+    {
+      "key": "7",
+      "sortable": false,
+      "title": "Tình trạng hoạt động",
+      "align": "center",
+      "value": "TinhTrangHoatDong",
+      "type": "text",
+      "class": "th-start ",
+      "width": 155
+    }
+  ],
+  "tempDsDoiTuong": [
+    {
+      "primKey": 1231232131,
+      "MaDinhDanh": "123456",
+      "CoSoGiaoDuc": "Trường TH Hà Thượng",
+      "DiaChi": "Thị trấn Hùng Sơn, huyện Đại Từ, tỉnh Thái Nguyên",
+      "NamThanhLap": 2006,
+      "CoQuanQuanLy": "Phòng GD&ĐT Đại Từ",
+      "LoaiCoSoGiaoDuc": "Đang hoạt động",
+      "TinhTrangHoatDong": "Đang hoạt động"
+    }
+  ],
+  "detail": {
+    "title": "Chi tiết cơ sở giáo dục",
+    "tabs": [
+      {
+        "tabId": "thongTinChungCuaCoSo",
+        "tabTitle": "Thông tin chung của cơ sở",
+        "formInfo": [
+          {
+            "label": "Mã định danh",
+            "value": "maDinhDanh",
+            "type": "text"
+          },
+          {
+            "label": "Tên cơ sở giáo dục",
+            "value": "tenCoSoGiaoDuc",
+            "type": "text"
+          },
+          {
+            "label": "Năm thành lập",
+            "value": "namThanhLap",
+            "type": "text"
+          },
+          {
+            "label": "Địa chỉ hoạt động",
+            "value": "diaChiHoatDong",
+            "type": "text"
+          },
+          {
+            "label": "Cơ quan quản lý cấp cha",
+            "value": "coQuanQuanLyCapCha",
+            "type": "text"
+          },
+          {
+            "label": "Chương trình giáo dục chính",
+            "value": "chuongTrinhGiaoDucChinh",
+            "type": "text"
+          },
+          {
+            "label": "Loại hình trường theo đầu tư",
+            "value": "loaiHinhTruongTheoDauTu",
+            "type": "text"
+          },
+          {
+            "label": "Loại cơ sở giáo dục theo cấp học",
+            "value": "loaiCoSoGiaoDucTheoCapHoc",
+            "type": "text"
+          },
+          {
+            "label": "Chủ sở hữu/Nhà đầu tư",
+            "value": "chuSoHuuNhaDauTu",
+            "type": "text"
+          },
+          {
+            "label": "Tình trạng hoạt động",
+            "value": "tinhTrangHoatDong",
+            "type": "text"
+          },
+          {
+            "label": "Các văn bản quyết định liên quan",
+            "value": "cacVanBanQuyetDinhLienQuan",
+            "type": "text"
+          },
+          {
+            "label": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "type": "text"
+          },
+          {
+            "label": "Tình trạng hiệu lực",
+            "value": "tinhTrangHieuLuc",
+            "type": "text"
+          }
+        ],
+        "danhSachLanhDao": {
+          "title": "Danh sách lãnh đạo quản lý cơ sở giáo dục",
+          "tableHeaders": [
+            {
+              "key": "0",
+              "sortable": false,
+              "title": "STT",
+              "align": "center",
+              "value": "stt",
+              "type": "index",
+              "class": "th-center td-center sticky-column",
+              "width": 35,
+              "style": "left: 0px;"
+            },
+            {
+              "key": "1",
+              "sortable": false,
+              "title": "Mã định danh MOET của cán bộ",
+              "align": "center",
+              "value": "maDinhDanhCanBo",
+              "type": "text",
+              "class": "th-start py-1 sticky-column",
+              "width": 200,
+              "style": "left: 60px;"
+            },
+            {
+              "key": "2",
+              "sortable": false,
+              "title": "Họ và tên",
+              "align": "center",
+              "value": "hoVaTen",
+              "type": "text",
+              "class": "th-start",
+              "width": 200
+            },
+            {
+              "key": "3",
+              "sortable": false,
+              "title": "Chức vụ công tác",
+              "align": "center",
+              "value": "chucVuCongTac",
+              "type": "text",
+              "class": "th-start",
+              "width": 200
+            }
+          ]
+        },
+        "danhSachChuanChuongTrinh": {
+          "title": "Danh sách các chuẩn chương trình được thực hiện tại cơ sở giáo dục",
+          "tableHeaders": [
+            {
+              "key": "0",
+              "sortable": false,
+              "title": "STT",
+              "align": "center",
+              "value": "stt",
+              "type": "index",
+              "class": "th-center td-center sticky-column",
+              "width": 35,
+              "style": "left: 0px;"
+            },
+            {
+              "key": "1",
+              "sortable": false,
+              "title": "Chương trình giáo dục",
+              "align": "center",
+              "value": "chuongTrinhGiaoDuc",
+              "type": "text",
+              "class": "th-start py-1 sticky-column",
+              "width": 200,
+              "style": "left: 60px;"
+            },
+            {
+              "key": "2",
+              "sortable": false,
+              "title": "Cấp học của chuẩn chương trình",
+              "align": "center",
+              "value": "capHocChuanCT",
+              "type": "text",
+              "class": "th-start",
+              "width": 220
+            },
+            {
+              "key": "3",
+              "sortable": false,
+              "title": "Cấp bậc trình độ đào tạo",
+              "align": "center",
+              "value": "capBacTrinhDoDaoTao",
+              "type": "text",
+              "class": "th-start",
+              "width": 220
+            },
+            {
+              "key": "4",
+              "sortable": false,
+              "title": "Các khối ngành đào tạo",
+              "align": "center",
+              "value": "khoiNganhDaoTao",
+              "type": "text",
+              "class": "th-start",
+              "width": 220
+            },
+            {
+              "key": "5",
+              "sortable": false,
+              "title": "Hình thức đào tạo",
+              "align": "center",
+              "value": "hinhThucDaoTao",
+              "type": "text",
+              "class": "th-center",
+              "width": 180
+            },
+            {
+              "key": "6",
+              "sortable": false,
+              "title": "Số năm đào tạo",
+              "align": "center",
+              "value": "soNamDaoTao",
+              "type": "text",
+              "class": "th-center",
+              "width": 150
+            }
+          ]
+        }
+      },
+      {
+        "tabId": "thongTinTuyenSinh",
+        "tabTitle": "Thông tin tuyển sinh",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Mã định danh",
+            "align": "center",
+            "value": "maDinhDanh",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 140,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Năm học thực hiện tuyển sinh",
+            "align": "center",
+            "value": "namHocTuyenSinh",
+            "type": "text",
+            "class": "th-center",
+            "width": 200
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Chương trình giáo dục tuyển sinh",
+            "align": "center",
+            "value": "chuongTrinhTuyenSinh",
+            "type": "text",
+            "class": "th-start",
+            "width": 220
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Ngày bắt đầu",
+            "align": "center",
+            "value": "ngayBatDau",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Ngày kết thúc",
+            "align": "center",
+            "value": "ngayKetThuc",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "6",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "action",
+            "class": "th-center",
+            "width": 120
+          }
+        ]
+      },
+      {
+        "tabId": "danhSachNhapHoc",
+        "tabTitle": "Danh sách nhập học",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Mã định danh",
+            "align": "center",
+            "value": "maDinhDanh",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 140,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Họ và tên",
+            "align": "center",
+            "value": "hoVaTen",
+            "type": "text",
+            "class": "th-start",
+            "width": 180
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Giới tính",
+            "align": "center",
+            "value": "gioiTinh",
+            "type": "text",
+            "class": "th-center",
+            "width": 100
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Ngày sinh",
+            "align": "center",
+            "value": "ngaySinh",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Hoạt động tuyển sinh",
+            "align": "center",
+            "value": "hoatDongTuyenSinh",
+            "type": "text",
+            "class": "th-start",
+            "width": 200
+          },
+          {
+            "key": "6",
+            "sortable": false,
+            "title": "Hình thức tuyển sinh",
+            "align": "center",
+            "value": "hinhThucTuyenSinh",
+            "type": "text",
+            "class": "th-start",
+            "width": 180
+          },
+          {
+            "key": "7",
+            "sortable": false,
+            "title": "Ngành học",
+            "align": "center",
+            "value": "nganhHoc",
+            "type": "text",
+            "class": "th-start",
+            "width": 160
+          },
+          {
+            "key": "8",
+            "sortable": false,
+            "title": "Trạng thái học tập",
+            "align": "center",
+            "value": "trangThaiHocTap",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          },
+          {
+            "key": "9",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "action",
+            "class": "th-center",
+            "width": 120
+          }
+        ]
+      },
+      {
+        "tabId": "chungThuSo",
+        "tabTitle": "Chứng thư số",
+        "formInfo": [
+          {
+            "label": "Mã chứng thư số",
+            "value": "maChungThuSo",
+            "type": "text"
+          },
+          {
+            "label": "Đối tượng quản lý",
+            "value": "doiTuongQuanLy",
+            "type": "text"
+          },
+          {
+            "label": "Trạng thái chứng thư số",
+            "value": "trangThaiChungThuSo",
+            "type": "text"
+          },
+          {
+            "label": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "type": "text"
+          },
+          {
+            "label": "Thông tin chứng thư số",
+            "value": "thongTinChungThuSo",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  "formSearch": [
+    {
+      "name": "ChuongTrinhGiaoDuc",
+      "title": "Chương trình giáo dục",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "LoaiCoSoGiaoDuc",
+      "title": "Loại cơ sở giáo dục",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "LoaiHinhTruong",
+      "title": "Loại hình trường",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    },
+    {
+      "name": "TinhTrangHoatDong",
+      "title": "Tình trạng hoạt động",
+      "type": "select",
+      "itemText": "",
+      "itemValue": "",
+      "fieldClass": "v-col-xs-12 v-col-4",
+      "api": "",
+      "responseDataApi": "content",
+      "mapping": "",
+      "placeHolder": "Chọn...",
+      "defaultValue": "",
+      "dataType": "",
+      "dataSource": [],
+      "autoEvent": ""
+    }
+  ]
+}

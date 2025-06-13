@@ -1,0 +1,53 @@
+// Import các styles cơ bản từ Vuetify
+@use 'vuetify/styles/settings/_variables' as variables;
+
+// Import all components
+@forward 'vuetify/styles/components/VApp';
+@forward 'vuetify/styles/components/VAutocomplete';
+@forward 'vuetify/styles/components/VBtn';
+@forward 'vuetify/styles/components/VCard';
+@forward 'vuetify/styles/components/VCheckbox';
+@forward 'vuetify/styles/components/VChip';
+@forward 'vuetify/styles/components/VDialog';
+@forward 'vuetify/styles/components/VDivider';
+@forward 'vuetify/styles/components/VExpansionPanel';
+@forward 'vuetify/styles/components/VField';
+@forward 'vuetify/styles/components/VForm';
+@forward 'vuetify/styles/components/VIcon';
+@forward 'vuetify/styles/components/VImg';
+@forward 'vuetify/styles/components/VInput';
+@forward 'vuetify/styles/components/VItemGroup';
+@forward 'vuetify/styles/components/VList';
+@forward 'vuetify/styles/components/VMenu';
+@forward 'vuetify/styles/components/VMessages';
+@forward 'vuetify/styles/components/VNavigationDrawer';
+@forward 'vuetify/styles/components/VOverlay';
+@forward 'vuetify/styles/components/VPagination';
+@forward 'vuetify/styles/components/VProgressCircular';
+@forward 'vuetify/styles/components/VRadioGroup';
+@forward 'vuetify/styles/components/VSelect';
+@forward 'vuetify/styles/components/VSheet';
+@forward 'vuetify/styles/components/VSnackbar';
+@forward 'vuetify/styles/components/VSwitch';
+@forward 'vuetify/styles/components/VTabs';
+@forward 'vuetify/styles/components/VTable';
+@forward 'vuetify/styles/components/VTextarea';
+@forward 'vuetify/styles/components/VTextField';
+@forward 'vuetify/styles/components/VTimeline';
+@forward 'vuetify/styles/components/VToolbar';
+@forward 'vuetify/styles/components/VTooltip';
+
+// Import labs components
+// Trong Vuetify 3.8.0, VDataTable styles được bao gồm trong styles chính
+@forward 'vuetify/styles/labs/VTreeview';
+
+// Import styles for Grid (VRow, VCol, VContainer)
+@forward 'vuetify/styles/components/VGrid';
+
+// Import core styles
+@forward 'vuetify/styles/elements/index';
+@forward 'vuetify/styles/settings/index';
+@forward 'vuetify/styles/tools/index';
+
+// Utilities
+@forward 'vuetify/styles/utilities/index'; 
