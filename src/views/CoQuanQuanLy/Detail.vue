@@ -19,18 +19,19 @@ const configLoaded = ref(false);
 const detail = ref({});
 const tabIndex = ref(0);
 
-const coQuanQuanLy = ref({});
-const chungThuSo = ref({});
-const coSoGiaoDuc = ref({});
 
 const currentTabId = ref("coQuanQuanLy");
 
 const TimKiemNangCao = defineAsyncComponent(() =>
-  import("@/components/TimKiemNangCao.vue")
+import("@/components/TimKiemNangCao.vue")
 );
 function getTab(id) {
   return detail?.value?.tabs?.find((tab) => tab.tabId === id);
 }
+
+const coQuanQuanLy = ref({});
+const chungThuSo = ref({});
+const coSoGiaoDuc = ref({});
 
 const getConfigByModuleType = async () => {
   if (!moduleType.value) return null;
@@ -57,6 +58,9 @@ const loadConfiguration = async () => {
     console.log(config);
     jsondata.value = config;
     detail.value = config["detail"];
+    coQuanQuanLy.value = getTab("coQuanQuanLy");
+    chungThuSo.value = getTab("chungThuSo");
+    coSoGiaoDuc.value = getTab("coSoGiaoDuc");
 
     configLoaded.value = true;
     return config;
@@ -66,6 +70,36 @@ const loadConfiguration = async () => {
 
     throw error;
   }
+};
+const getValue = function (obj, key) {
+  const keys = key.split(".");
+  let value = obj;
+  for (let i = 0; i < keys.length; i++) {
+    if (value && typeof value === "object" && keys[i] in value) {
+      value = value[keys[i]];
+    } else {
+      return "";
+    }
+  }
+  return value;
+};
+const dateLocale = function (dateInput) {
+  if (!dateInput) return "";
+  let date = new Date(dateInput);
+  return `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}/${date.getFullYear()}`;
+};
+const dateLocaleTime = function (dateInput) {
+  let date = new Date(dateInput);
+  return `${date.getHours().toString().padStart(2, "0")}:${date
+    .getMinutes()
+    .toString()
+    .padStart(2, "0")} ${date.getDate().toString().padStart(2, "0")}/${(
+    date.getMonth() + 1
+  )
+    .toString()
+    .padStart(2, "0")}/${date.getFullYear()}`;
 };
 
 const setupPromise = loadConfiguration().then(() => {
@@ -122,37 +156,42 @@ const setupPromise = loadConfiguration().then(() => {
           <!-- Window content -->
           <v-window v-model="currentTabId" class="mt-4">
             <v-window-item value="coQuanQuanLy">
-              <v-row class="mb-6">
-                <v-col cols="7">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('coQuanQuanLy')?.formInfo.slice(
-                      0,
-                      4
-                    )"
-                    :key="'left-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+              <v-row
+                class="mx-0 my-0 px-0"
+                v-if="coQuanQuanLy.formInfo && coQuanQuanLy.formInfo.length"
+              >
+                <template v-for="(item, index) in coQuanQuanLy.formInfo" v-bind:key="index">
+                  <v-col :class="item['class']">
+                    <span class="label-text font-weight-medium mr-2"> {{ item.title }}: </span>
+                    <span class="content-text" v-if="item.type == 'date'">
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocale(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else-if="item.type == 'datetime'"
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
-
-                <v-col cols="5">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('coQuanQuanLy')?.formInfo.slice(
-                      4
-                    )"
-                    :key="'right-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocaleTime(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
+                      <!-- {{ getValue(thongTinDoiTuong, item.value) }} -->
+                    </span>
+                  </v-col>
+                </template>
               </v-row>
-              <v-row class="mx-0 my-0">
+              <v-row class="mx-0 my-0 mt-3">
                 <v-btn
                   size="small"
                   color="var(--main-color)"
@@ -185,33 +224,40 @@ const setupPromise = loadConfiguration().then(() => {
               </v-row>
             </v-window-item>
             <v-window-item value="chungThuSo">
-              <v-row>
-                <v-col cols="7">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('chungThuSo')?.formInfo.slice(
-                      0,
-                      4
-                    )"
-                    :key="'left-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+              <v-row
+                class="mx-0 my-0 px-0"
+                v-if="chungThuSo.formInfo && chungThuSo.formInfo.length"
+              >
+                <template v-for="(item, index) in chungThuSo.formInfo" v-bind:key="index">
+                  <v-col :class="item['class']">
+                    <span class="label-text font-weight-medium mr-2"> {{ item.title }}: </span>
+                    <span class="content-text" v-if="item.type == 'date'">
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocale(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else-if="item.type == 'datetime'"
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
-
-                <v-col cols="5">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('chungThuSo')?.formInfo.slice(4)"
-                    :key="'right-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocaleTime(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
+                      <!-- {{ getValue(thongTinDoiTuong, item.value) }} -->
+                    </span>
+                  </v-col>
+                </template>
               </v-row>
               <v-row class="mx-0 my-0 mt-3">
                 <v-btn
@@ -273,13 +319,13 @@ const setupPromise = loadConfiguration().then(() => {
               </v-row>
               <div>
                 <TimKiemNangCao
-                  :mauNhap="getTab('coSoGiaoDuc')?.formSearch"
+                  :mauNhap="coSoGiaoDuc?.formSearch"
                   :formType="'normalSearch'"
                 >
                 </TimKiemNangCao>
               </div>
               <v-data-table
-                :headers="getTab('coSoGiaoDuc')?.tableHeaders"
+                :headers="coSoGiaoDuc?.tableHeaders"
                 item-value="primKey"
                 hide-default-footer
                 class="table-base"

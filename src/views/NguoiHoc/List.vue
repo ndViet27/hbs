@@ -9,6 +9,8 @@ import {
   defineAsyncComponent,
 } from "vue";
 import { useAppStore } from "@/stores";
+import { generalApi, hosoApi } from "@/api";
+import { useFormSearchRouter } from "@/composables/useFormSearchRouter";
 const route = useRoute();
 const router = useRouter();
 const jsondata = ref(null);
@@ -21,6 +23,12 @@ const props = defineProps({
     default: "",
   },
 });
+
+const {
+  isProcessingSearch,
+  dataInputSearchCopy,
+  changeFormSearch: formSearchChange,
+} = useFormSearchRouter();
 
 const TimKiemNangCao = defineAsyncComponent(() =>
   import("@/components/TimKiemNangCao.vue")
@@ -41,6 +49,9 @@ const loading = ref(false);
 const dsDoiTuong = ref([]);
 const itemsPerPage = ref(20);
 const loadingData = ref(false);
+const configError = ref(null);
+
+const dataConfig = ref([]);
 
 const getConfigByModuleType = async () => {
   if (!moduleType.value) return null;
@@ -70,7 +81,7 @@ const loadConfiguration = async () => {
     headersMobile.value = config?.tableHeadersMobile ?? [];
     mauTimKiem.value = config?.formSearch ?? [];
 
-    dsDoiTuong.value = config?.tempDsDoiTuong ?? [];
+    // dsDoiTuong.value = config?.tempDsDoiTuong ?? [];
     console.log(dsDoiTuong.value);
 
     configLoaded.value = true;
@@ -88,9 +99,20 @@ const redirectThongTinDoiTuong = function (dt, hoso) {
   }
   let queryCurrent = route && route.query ? route.query : {};
   router.push({
-    path: `${subMenuSelected.value.to}/${dt.primKey}`,
+    path: `${subMenuSelected.value.to}/${dt.MaMOET}`,
     query: queryCurrent,
   });
+};
+const getColumnCount = () => {
+  if (!jsondata.value || !jsondata.value.tableHeaders) return 0;
+
+  if (Array.isArray(jsondata.value.tableHeaders[0])) {
+    const firstRow = jsondata.value.tableHeaders[0];
+    return firstRow.reduce((total, header) => {
+      return total + (header.colspan || 1);
+    }, 0);
+  }
+  return jsondata.value.tableHeaders.length;
 };
 const getValue = function (obj, key) {
   const keys = key.split(".");
@@ -105,10 +127,131 @@ const getValue = function (obj, key) {
   return value;
 };
 
+const getMockdata = async () => {
+  try {
+    const result = await import(
+      `@/metadata/DuLieuChuModule/mockdata_dulieuchu.json`
+    );
+    return result.nguoiHocList; 
+  } catch (error) {
+    console.error(`Lỗi khi tải dữ liệu mock: `, error); 
+    configError.value = error;
+    return []; 
+  }
+};
+
+const getDanhSach = function (type) {
+  if (type == "reset") {
+    page.value = 0;
+  }
+
+  let filter = {
+    path: "/publicadministrativemgt/internal/thutuchanhchinh/1.0/filter?page=0&size=100",
+    collection: "chungthuso",
+    params: {
+      page: page.value,
+      size: itemsPerPage.value,
+      // keyword: keywordSearch.value ? keywordSearch.value : "",
+    },
+  };
+
+  // Thêm tất cả các tham số tìm kiếm từ URL vào filter.params
+  if (
+    dataInputSearchCopy.value &&
+    Object.keys(dataInputSearchCopy.value).length > 0
+  ) {
+    for (const key in dataInputSearchCopy.value) {
+      const value = dataInputSearchCopy.value[key];
+      const fieldDef = mauTimKiem.value.find((field) => field.name === key);
+
+      // Nếu giá trị là null, undefined hoặc chuỗi rỗng, bỏ qua
+      if (value === null || value === undefined || value === "") continue;
+
+      // Xử lý các trường hợp đặc biệt (array, object...)
+      if (Array.isArray(value)) {
+        // Nếu là mảng rỗng, bỏ qua
+        if (value.length === 0) continue;
+
+        // Nếu trường có cấu hình và là select
+        if (fieldDef && fieldDef.type === "select") {
+          if (!fieldDef.returnObject) {
+            // Nếu return-object là false, các giá trị trong mảng là primitive
+            filter.params[key] = value.join(",");
+          } else {
+            // Nếu return-object là true hoặc không được định nghĩa, chuyển đổi đối tượng
+            filter.params[key] = value
+              .map((item) =>
+                typeof item === "object"
+                  ? getValue(item, fieldDef.mapping || fieldDef.itemValue)
+                  : item
+              )
+              .join(",");
+          }
+        } else {
+          // Mảng thông thường hoặc không có cấu hình trường
+          filter.params[key] = value
+            .map((item) => {
+              if (typeof item === "object" && item !== null) {
+                return item.id || item.MaMuc || item.value || item;
+              }
+              return item;
+            })
+            .join(",");
+        }
+      } else if (typeof value === "object" && value !== null) {
+        // Xử lý trường hợp đối tượng đơn lẻ
+        if (fieldDef && fieldDef.type === "select") {
+          if (!fieldDef.returnObject) {
+            // Không nên xảy ra vì nếu return-object là false, giá trị phải là primitive
+            filter.params[key] = value.toString();
+          } else {
+            // Lấy giá trị từ đối tượng theo mapping
+            filter.params[key] = getValue(
+              value,
+              fieldDef.mapping || fieldDef.itemValue
+            );
+          }
+        } else {
+          // Đối tượng không phải từ select hoặc không có cấu hình
+          filter.params[key] =
+            value.id || value.MaMuc || value.value || JSON.stringify(value);
+        }
+      } else {
+        // Giá trị primitive (chuỗi, số...)
+        filter.params[key] = value;
+      }
+    }
+  }
+
+  dsDoiTuong.value = [];
+  loadingData.value = true;
+  total.value = 0;
+  pageCount.value = 0;
+
+  generalApi
+    .getDanhSachDoiTuong(filter)
+    .then(function (result) {
+      loadingData.value = false;
+      dsDoiTuong.value = result.data.result;
+      total.value = result.data.totalItems;
+      pageCount.value = result.data.totalPages;
+    })
+    .catch(async function (error) {
+      // Thêm async
+      loadingData.value = false;
+      dsDoiTuong.value = await getMockdata();
+      console.log("dsdoituong (mock)", dsDoiTuong.value); 
+      total.value = dsDoiTuong.value.length; 
+      pageCount.value = Math.ceil(dsDoiTuong.value.length / itemsPerPage.value); 
+      console.error("Lỗi khi lấy danh sách hồ sơ (API):", error);
+    });
+};
+
 watch(route, async (to, from) => {
   moduleType.value = to.meta?.moduleType;
   if (moduleType.value) {
     await loadConfiguration();
+    getDanhSach();
 
     // keywordSearch.value = "";
     // if (advanceSearchReference.value) {
@@ -127,6 +270,7 @@ watch(route, async (to, from) => {
 onMounted(async () => {
   // Đánh dấu đang xử lý từ path để tránh watch query chạy
   if (!configLoaded.value) {
+    getDanhSach();
     await loadConfiguration();
   }
   // initPage()
@@ -394,6 +538,13 @@ onMounted(async () => {
                 </tr>
               </template>
             </v-data-table>
+            <!-- <Pagination
+              :pageInput="page + 1"
+              :pageCount="pageCount"
+              :total="total"
+              @changePage="changePage"
+              style="margin-bottom: 50px"
+            ></Pagination> -->
           </v-col>
         </v-row>
       </v-card>

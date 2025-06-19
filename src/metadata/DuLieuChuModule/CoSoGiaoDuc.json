@@ -18,7 +18,7 @@
       "sortable": false,
       "title": "Mã định danh",
       "align": "center",
-      "value": "MaDinhDanh",
+      "value": "MaMOET",
       "type": "text",
       "class": "th-start td-center py-1 sticky-column",
       "width": 101,
@@ -70,7 +70,8 @@
       "title": "Loại cơ sở giáo dục",
       "align": "center",
       "value": "LoaiCoSoGiaoDuc",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 152
     },
@@ -80,7 +81,8 @@
       "title": "Tình trạng hoạt động",
       "align": "center",
       "value": "TinhTrangHoatDong",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 155
     }
@@ -105,68 +107,81 @@
         "tabTitle": "Thông tin chung của cơ sở",
         "formInfo": [
           {
-            "label": "Mã định danh",
+            "title": "Mã định danh",
             "value": "maDinhDanh",
+            "class": "v-col-7 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Tên cơ sở giáo dục",
-            "value": "tenCoSoGiaoDuc",
-            "type": "text"
-          },
-          {
-            "label": "Năm thành lập",
-            "value": "namThanhLap",
-            "type": "text"
-          },
-          {
-            "label": "Địa chỉ hoạt động",
-            "value": "diaChiHoatDong",
-            "type": "text"
-          },
-          {
-            "label": "Cơ quan quản lý cấp cha",
-            "value": "coQuanQuanLyCapCha",
-            "type": "text"
-          },
-          {
-            "label": "Chương trình giáo dục chính",
-            "value": "chuongTrinhGiaoDucChinh",
-            "type": "text"
-          },
-          {
-            "label": "Loại hình trường theo đầu tư",
-            "value": "loaiHinhTruongTheoDauTu",
-            "type": "text"
-          },
-          {
-            "label": "Loại cơ sở giáo dục theo cấp học",
-            "value": "loaiCoSoGiaoDucTheoCapHoc",
-            "type": "text"
-          },
-          {
-            "label": "Chủ sở hữu/Nhà đầu tư",
+            "title": "Chủ sở hữu/Nhà đầu tư",
             "value": "chuSoHuuNhaDauTu",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Tình trạng hoạt động",
+            "title": "Tên cơ sở giáo dục",
+            "value": "tenCoSoGiaoDuc",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hoạt động",
             "value": "tinhTrangHoatDong",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Các văn bản quyết định liên quan",
+            "title": "Năm thành lập",
+            "value": "namThanhLap",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Các văn bản quyết định liên quan",
             "value": "cacVanBanQuyetDinhLienQuan",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Thời gian sửa đổi",
+            "title": "Địa chỉ hoạt động",
+            "value": "diaChiHoatDong",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
             "value": "thoiGianSuaDoi",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Tình trạng hiệu lực",
+            "title": "Cơ quan quản lý cấp cha",
+            "value": "coQuanQuanLyCapCha",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hiệu lực",
             "value": "tinhTrangHieuLuc",
+            "class": "v-col-5 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Chương trình giáo dục chính",
+            "value": "chuongTrinhGiaoDucChinh",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Loại hình trường theo đầu tư",
+            "value": "loaiHinhTruongTheoDauTu",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Loại cơ sở giáo dục theo cấp học",
+            "value": "loaiCoSoGiaoDucTheoCapHoc",
+            "class": "v-col-7 py-0 pt-1 px-0",
             "type": "text"
           }
         ],
@@ -250,7 +265,7 @@
               "value": "capHocChuanCT",
               "type": "text",
               "class": "th-start",
-              "width": 220
+              "width": 250
             },
             {
               "key": "3",
@@ -315,7 +330,7 @@
             "sortable": false,
             "title": "Mã định danh",
             "align": "center",
-            "value": "maDinhDanh",
+            "value": "MaMOET",
             "type": "text",
             "class": "th-start py-1 sticky-column",
             "width": 140,
@@ -486,28 +501,33 @@
         "tabTitle": "Chứng thư số",
         "formInfo": [
           {
-            "label": "Mã chứng thư số",
+            "title": "Mã chứng thư số",
             "value": "maChungThuSo",
+            "class": "v-col-4 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Đối tượng quản lý",
-            "value": "doiTuongQuanLy",
-            "type": "text"
-          },
-          {
-            "label": "Trạng thái chứng thư số",
-            "value": "trangThaiChungThuSo",
-            "type": "text"
-          },
-          {
-            "label": "Thời gian sửa đổi",
-            "value": "thoiGianSuaDoi",
-            "type": "text"
-          },
-          {
-            "label": "Thông tin chứng thư số",
+            "title": "Thông tin chứng thư số",
             "value": "thongTinChungThuSo",
+            "class": "v-col-8 v-row-4 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Đối tượng quản lý",
+            "value": "doiTuongQuanLy",
+            "class": "v-col-12 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trạng thái chứng thư số",
+            "value": "trangThaiChungThuSo",
+            "class": "v-col-12 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "class": "v-col-12 py-0 pt-1 px-0",
             "type": "text"
           }
         ]

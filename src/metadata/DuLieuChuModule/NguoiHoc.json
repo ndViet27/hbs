@@ -50,7 +50,8 @@
       "title": "Giới tính",
       "align": "center",
       "value": "GioiTinh",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 71
     },
@@ -60,7 +61,8 @@
       "title": "Diện chính sách ưu tiên",
       "align": "center",
       "value": "DienChinhSachUuTien",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start",
       "width": 172
     },
@@ -70,7 +72,8 @@
       "title": "Cấp học",
       "align": "center",
       "value": "CapHoc",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 82
     },
@@ -80,7 +83,8 @@
       "title": "Cấp bậc trình độ đào tạo cao nhất đã hoàn thành",
       "align": "center",
       "value": "CapBacTrinhDoDaoTao",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 179
     },
@@ -100,7 +104,8 @@
       "title": "Trạng thái học tập",
       "align": "center",
       "value": "TrangThaiHocTap",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start ",
       "width": 90
     }
@@ -119,6 +124,784 @@
       "TrangThaiHocTap": "123"
     }
   ],
+  "detail": {
+    "title": "Chi tiết cơ sở giáo dục",
+    "tabs": [
+      {
+        "tabId": "thongTinCaNhan",
+        "tabTitle": "Thông tin cá nhân",
+        "formSearch": [],
+        "formInfo": [
+          {
+            "title": "Mã định danh (MOET)",
+            "value": "maDinhDanhMOET",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Diện chính sách ưu tiên",
+            "value": "dienChinhSachUuTien",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Họ và tên",
+            "value": "hoVaTen",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Khu vực ưu tiên",
+            "value": "khuVucUuTien",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Số định danh cá nhân",
+            "value": "soDinhDanhCaNhan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Cấp học",
+            "value": "capHoc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Ngày sinh",
+            "value": "ngaySinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "date"
+          },
+          {
+            "title": "Cấp bậc trình độ đào tạo",
+            "value": "capBacTrinhDoDaoTao",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Giới tính",
+            "value": "gioiTinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Khối ngành đào tạo",
+            "value": "khoiNganhDaoTao",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi sinh",
+            "value": "noiSinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi đang theo học",
+            "value": "noiDangTheoHoc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Địa chỉ thường trú",
+            "value": "diaChiThuongTru",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trạng thái học tập",
+            "value": "trangThaiHocTap",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi ở hiện tại",
+            "value": "noiOHienTai",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa lỗi",
+            "value": "thoiGianSuaLoi",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Dân tộc",
+            "value": "danToc",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hiệu lực",
+            "value": "tinhTrangHieuLuc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Quốc tịch",
+            "value": "quocTich",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thông tin cha",
+            "value": "thongTinCha",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thông tin mẹ",
+            "value": "thongTinMe",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thông tin người giám hộ",
+            "value": "thongTinNguoiGiamHo",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "tabId": "quaTrinhHocTap",
+        "tabTitle": "Quá trình học tập",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 38,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Thời gian",
+            "align": "center",
+            "value": "thoiGian",
+            "type": "text",
+            "class": "th-start",
+            "width": 236,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Tên trường/cơ sở đào tạo",
+            "align": "center",
+            "value": "tenTruongCoSoDaoTao",
+            "type": "text",
+            "class": "th-start td-start",
+            "width": 242
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Ngành học",
+            "align": "center",
+            "value": "nganhHoc",
+            "type": "text",
+            "class": "th-start",
+            "width": 242
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Hình thức đào tạo",
+            "align": "center",
+            "value": "hinhThucDaoTao",
+            "type": "text",
+            "class": "th-start",
+            "width": 242
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "text",
+            "class": "th-center",
+            "width": 80
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "ThoiGian",
+            "title": "Thời gian",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "TenTruongCoSoDaoTao",
+            "title": "Tên trường/cơ sở đào tạo",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "NganhHoc",
+            "title": "Ngành học",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      },
+      {
+        "tabId": "hocBa",
+        "tabTitle": "Học bạ",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Tên trường/cơ sở đào tạo",
+            "align": "center",
+            "value": "tenTruongCoSoDaoTao",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 200,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Số sổ đăng bộ học bạ",
+            "align": "center",
+            "value": "soSoDangBoHocBa",
+            "type": "text",
+            "class": "th-start",
+            "width": 239
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Năm bắt đầu - Năm kết thúc",
+            "align": "center",
+            "value": "namBatDauNamKetThuc",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Cấp học",
+            "align": "center",
+            "value": "capHoc",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Tên lớp học",
+            "align": "center",
+            "value": "tenLopHoc",
+            "type": "text",
+            "class": "th-start",
+            "width": 200
+          },
+          {
+            "key": "6",
+            "sortable": false,
+            "title": "Giáo viên chủ nhiệm",
+            "align": "center",
+            "value": "giaoVienChuNhiem",
+            "type": "text",
+            "class": "th-center",
+            "width": 180
+          },
+          {
+            "key": "7",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "ThoiGian",
+            "title": "Thời gian",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "TenTruongCoSoDaoTao",
+            "title": "Tên trường/cơ sở đào tạo",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "NganhHoc",
+            "title": "Ngành học",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      },
+      {
+        "tabId": "vanBangChungChi",
+        "tabTitle": "Văn bằng chứng chỉ",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Loại văn bằng/Chứng chỉ",
+            "align": "center",
+            "value": "loaiVanBangChungChi",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 165,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Chương trình giáo dục",
+            "align": "center",
+            "value": "chuongTrinhGiaoDuc",
+            "type": "text",
+            "class": "th-start",
+            "width": 239
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Cấp học",
+            "align": "center",
+            "value": "capHoc",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Trường/Cơ sở đào tạo",
+            "align": "center",
+            "value": "truongCoSoDaoTao",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Ngành học",
+            "align": "center",
+            "value": "nganhHoc",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "6",
+            "sortable": false,
+            "title": "Thời gian",
+            "align": "center",
+            "value": "thoiGian",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          },
+          {
+            "key": "7",
+            "sortable": false,
+            "title": "Hình thức đào tạo",
+            "align": "center",
+            "value": "hinhThucDaoTao",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          },
+          {
+            "key": "8",
+            "sortable": false,
+            "title": "Năm tốt nghiệp",
+            "align": "center",
+            "value": "namTotNghiep",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          },
+          {
+            "key": "9",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "text",
+            "class": "th-center",
+            "width": 160
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "ThoiGian",
+            "title": "Thời gian",
+            "type": "daterange",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "TenTruongCoSoDaoTao",
+            "title": "Tên trường/cơ sở đào tạo",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "NganhHoc",
+            "title": "Ngành học",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      },
+      {
+        "tabId": "chungNhanKetQuaThi",
+        "tabTitle": "Chứng nhận kết quả thi",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Cơ quan chứng nhận",
+            "align": "center",
+            "value": "coQuanChungNhan",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 165,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Chuẩn kỳ thi đánh giá",
+            "align": "center",
+            "value": "chuanKyThiDanhGia",
+            "type": "text",
+            "class": "th-start",
+            "width": 239
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Ngày thi",
+            "align": "center",
+            "value": "ngayThi",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Kết quả đánh giá",
+            "align": "center",
+            "value": "ketQuaDanhGia",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "coQuanChungNhan",
+            "title": "Cơ quan chứng nhận",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "ngayThi",
+            "title": "Ngày thi",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      },
+      {
+        "tabId": "chungNhanThanhTich",
+        "tabTitle": "Chứng nhận thành tích",
+        "tableHeaders": [
+          {
+            "key": "0",
+            "sortable": false,
+            "title": "STT",
+            "align": "center",
+            "value": "stt",
+            "type": "index",
+            "class": "th-center td-center sticky-column",
+            "width": 35,
+            "style": "left: 0px;"
+          },
+          {
+            "key": "1",
+            "sortable": false,
+            "title": "Cơ quan chứng nhận",
+            "align": "center",
+            "value": "coQuanChungNhan",
+            "type": "text",
+            "class": "th-start py-1 sticky-column",
+            "width": 165,
+            "style": "left: 60px;"
+          },
+          {
+            "key": "2",
+            "sortable": false,
+            "title": "Chuẩn kỳ thi thành tích",
+            "align": "center",
+            "value": "chuanKyThiThanhTich",
+            "type": "text",
+            "class": "th-start",
+            "width": 239
+          },
+          {
+            "key": "3",
+            "sortable": false,
+            "title": "Niên khóa thi",
+            "align": "center",
+            "value": "nienKhoaThi",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          },
+          {
+            "key": "4",
+            "sortable": false,
+            "title": "Mức giải thưởng",
+            "align": "center",
+            "value": "mucGiaiThuong",
+            "type": "text",
+            "class": "th-center",
+            "width": 140
+          },
+          {
+            "key": "5",
+            "sortable": false,
+            "title": "Thao tác",
+            "align": "center",
+            "value": "thaoTac",
+            "type": "text",
+            "class": "th-start",
+            "width": 240
+          }
+        ],
+        "formSearch": [
+          {
+            "name": "coQuanChungNhan",
+            "title": "Cơ quan chứng nhận",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "nienkhoathi",
+            "title": "Niên khóa thi",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          },
+          {
+            "name": "chuanKyThiThanhTich",
+            "title": "Chuẩn kỳ thi thành tích",
+            "type": "select",
+            "itemText": "",
+            "itemValue": "",
+            "fieldClass": "v-col-xs-12 v-col-4",
+            "api": "",
+            "responseDataApi": "content",
+            "mapping": "",
+            "placeHolder": "Chọn...",
+            "defaultValue": "",
+            "dataType": "",
+            "dataSource": [],
+            "autoEvent": ""
+          }
+        ]
+      }
+    ]
+  },
   "formSearch": [
     {
       "name": "DienChinhSachUuTien",

@@ -40,7 +40,8 @@
       "title": "Cấp hành chính",
       "align": "center",
       "value": "CapHanhChinh",
-      "type": "text",
+      "type": "object",
+      "mapping":"TenMuc",
       "class": "th-start",
       "width": 148
     },
@@ -111,43 +112,51 @@
         "tabTitle": "Thông tin cơ quan quản lý",
         "formInfo": [
           {
-            "label": "Mã định danh",
+            "title": "Mã định danh",
             "value": "maDinhDanh",
+            "class": "v-col-7 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Tên cơ quan quản lý",
-            "value": "tenCoQuanQuanLy",
-            "type": "text"
-          },
-          {
-            "label": "Cấp hành chính",
-            "value": "capHanhChinh",
-            "type": "text"
-          },
-          {
-            "label": "Địa chỉ hoạt động",
-            "value": "diaChiHoatDong",
-            "type": "text"
-          },
-          {
-            "label": "Cơ quan quản lý cấp cha",
+            "title": "Cơ quan quản lý cấp cha",
             "value": "coQuanQuanLyCapCha",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Mã phân cấp",
+            "title": "Tên cơ quan quản lý",
+            "value": "tenCoQuanQuanLy",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Mã phân cấp",
             "value": "maPhanCap",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Thời gian sửa đổi",
+            "title": "Cấp hành chính",
+            "value": "capHanhChinh",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
             "value": "thoiGianSuaDoi",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Tình trạng hiệu lực",
+            "title": "Địa chỉ hoạt động",
+            "value": "diaChiHoatDong",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hiệu lực",
             "value": "tinhTrangHieuLuc",
+            "class": "v-col-5 py-0 pt-1 px-0",
             "type": "text"
           }
         ]
@@ -157,28 +166,33 @@
         "tabTitle": "Chứng thư số",
         "formInfo": [
           {
-            "label": "Mã chứng thư số",
+            "title": "Mã chứng thư số",
             "value": "maChungThuSo",
+            "class": "v-col-7 py-0 pt-1 px-0",
             "type": "text"
           },
           {
-            "label": "Đối tượng quản lý",
-            "value": "doiTuongQuanLy",
-            "type": "text"
-          },
-          {
-            "label": "Trạng thái chứng thư số",
-            "value": "trangThaiChungThuSo",
-            "type": "text"
-          },
-          {
-            "label": "Thời gian sửa đổi",
-            "value": "thoiGianSuaDoi",
-            "type": "text"
-          },
-          {
-            "label": "Thông tin chứng thư số",
+            "title": "Thông tin chứng thư số",
             "value": "thongTinChungThuSo",
+            "class": "v-col-5 v-row-4 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Đối tượng quản lý",
+            "value": "doiTuongQuanLy",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trạng thái chứng thư số",
+            "value": "trangThaiChungThuSo",
+            "class": "v-col-7 py-0 pt-1 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "class": "v-col-7 py-0 pt-1 px-0",
             "type": "text"
           }
         ]
@@ -195,7 +209,7 @@
             "value": "stt",
             "type": "index",
             "class": "th-center td-center sticky-column",
-            "width": 35,
+            "width": 36,
             "style": "left: 0px;"
           },
           {
@@ -206,7 +220,7 @@
             "value": "maMoet",
             "type": "text",
             "class": "th-start py-1 sticky-column",
-            "width": 165,
+            "width": 144,
             "style": "left: 60px;"
           },
           {
@@ -217,7 +231,7 @@
             "value": "tenCoSoGiaoDuc",
             "type": "text",
             "class": "th-start",
-            "width": 239
+            "width": 178
           },
           {
             "key": "3",
@@ -227,7 +241,7 @@
             "value": "diaChiHoatDongChinh",
             "type": "text",
             "class": "th-start",
-            "width": 240
+            "width": 230
           },
           {
             "key": "4",
@@ -237,7 +251,7 @@
             "value": "namThanhLap",
             "type": "text",
             "class": "th-center",
-            "width": 140
+            "width": 111
           },
           {
             "key": "5",

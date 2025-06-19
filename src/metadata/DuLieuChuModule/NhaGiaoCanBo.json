@@ -49,7 +49,8 @@
       "title": "Giới tính",
       "align": "center",
       "value": "GioiTinh",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start",
       "width": 110
     },
@@ -59,7 +60,8 @@
       "title": "Nơi công tác",
       "align": "center",
       "value": "NoiCongTac",
-      "type": "text",
+      "type": "object",
+      "mapping": "TenMuc",
       "class": "th-start",
       "width": 330
     },
@@ -88,16 +90,302 @@
     "title": "Chi tiết cơ sở giáo dục",
     "tabs": [
       {
-        "tabId": "thongTinChungCuaCoSo",
-        "tabTitle": "Thông tin chung của cơ sở"
+        "tabId": "thongTinCaNhan",
+        "tabTitle": "Thông tin cá nhân",
+        "formInfo": [
+          {
+            "title": "Mã định danh (MOET)",
+            "value": "maDinhDanhMOET",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trình độ chuyên môn",
+            "value": "trinhDoChuyenMon",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Họ và tên",
+            "value": "hoVaTen",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Khối ngành đào tạo chuyên môn",
+            "value": "khoiNganhDaoTaoChuyenMon",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Số định danh cá nhân",
+            "value": "soDinhDanhCaNhan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trình độ quản lý giáo dục",
+            "value": "trinhDoQuanLyGiaoDuc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Ngày sinh",
+            "value": "ngaySinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "date"
+          },
+          {
+            "title": "Chức danh nghề nghiệp",
+            "value": "chucDanhNgheNghiep",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Giới tính",
+            "value": "gioiTinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Chức vụ công tác",
+            "value": "chucVuCongTac",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Dân tộc",
+            "value": "danToc",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi công tác hiện tại",
+            "value": "noiCongTacHienTai",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tôn giáo",
+            "value": "tonGiao",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Cơ quan chủ quản",
+            "value": "coQuanChuQuan",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hôn nhân",
+            "value": "tinhTrangHonNhan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trạng thái công tác",
+            "value": "trangThaiCongTac",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Quê quán",
+            "value": "queQuan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "class": "v-col-5 py-0 px-0",
+            "type": "datetime"
+          },
+          {
+            "title": "Địa chỉ thường trú",
+            "value": "diaChiThuongTru",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hiệu lực",
+            "value": "tinhTrangHieuLuc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi ở hiện nay",
+            "value": "noiOHienNay",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Quốc tịch",
+            "value": "quocTich",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          }
+        ]
       },
       {
-        "tabId": "thongTinTuyenSinh",
-        "tabTitle": "Thông tin tuyển sinh"
+        "tabId": "quaTrinhCongTac",
+        "tabTitle": "Quá trình công tác",
+        "formInfo": [
+          {
+            "title": "Mã định danh MOET của cán bộ nhà giáo",
+            "value": "maDinhDanhMOETCuaCanBoNhaGiao",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trình độ chuyên môn",
+            "value": "trinhDoChuyenMon",
+            "class": "v-col-5 py-0 px-0",
+            "type": "datetime"
+          },
+          {
+            "title": "Họ và tên",
+            "value": "hoVaTen",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Khối ngành đào tạo chuyên môn",
+            "value": "khoiNganhDaoTaoChuyenMon",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Số định danh cá nhân",
+            "value": "soDinhDanhCaNhan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Lĩnh vực đào tạo",
+            "value": "linhVucDaoTao",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Ngày sinh",
+            "value": "ngaySinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nhóm ngành đào tạo",
+            "value": "nhomNganhDaoTao",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Giới tính",
+            "value": "gioiTinh",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Ngành đào tạo",
+            "value": "nganhDaoTao",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Dân tộc",
+            "value": "danToc",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trình độ quản lý giáo dục",
+            "value": "trinhDoQuanLyGiaoDuc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tôn giáo",
+            "value": "tonGiao",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Chức danh nghề nghiệp",
+            "value": "chucDanhNgheNghiep",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Tình trạng hôn nhân",
+            "value": "tinhTrangHonNhan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Chức vụ công tác",
+            "value": "chucVuCongTac",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Quê quán",
+            "value": "queQuan",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi công tác hiện tại",
+            "value": "noiCongTacHienTai",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Địa chỉ thường trú",
+            "value": "diaChiThuongTru",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Cơ quan chủ quản",
+            "value": "coQuanChuQuan",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Nơi ở hiện nay",
+            "value": "noiOHienNay",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Trạng thái công tác",
+            "value": "trangThaiCongTac",
+            "class": "v-col-5 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Quốc tịch",
+            "value": "quocTich",
+            "class": "v-col-7 py-0 px-0",
+            "type": "text"
+          },
+          {
+            "title": "Thời gian sửa đổi",
+            "value": "thoiGianSuaDoi",
+            "class": "v-col-5 py-0 px-0",
+            "type": "datetime"
+          },
+          {
+            "title": "Tình trạng hiệu lực",
+            "value": "tinhTrangHieuLuc",
+            "class": "v-col-5 py-0 px-0",
+            "type": "datetime"
+          }
+        ]
       },
       {
-        "tabId": "danhSachNhapHoc",
-        "tabTitle": "Danh sách nhập học"
+        "tabId": "vanBangChungChi",
+        "tabTitle": "Văn bằng chứng chỉ"
       },
       {
         "tabId": "chungThuSo",

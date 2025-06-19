@@ -1,0 +1,74 @@
+{
+  "coQuanQuanLyList": [
+    {
+      "MaMOET": "123456",
+      "TenCoQuanQuanLy": "Phòng GD& ĐT huyện Đại Từ",
+      "CapHanhChinh": {
+        "MaMuc": "03",
+        "TenMuc": "Cấp Huyện"
+      },
+      "CoQuanQuanLy": "Sở GD&ĐT tỉnh Thái Nguyên",
+      "MaPhanCap": "123"
+    }
+  ],
+  "coSoGiaoDucList": [
+    {
+      "MaMOET": "123456",
+      "CoSoGiaoDuc": "Trường TH Hà Thượng",
+      "DiaChi": "Thị trấn Hưng Sơn, Huyện Đại Từ, tỉnh Thái Nguyên",
+      "NamThanhLap": 2006,
+      "CoQuanQuanLy": "Phòng GD& ĐT Đại Từ",
+      "LoaiCoSoGiaoDuc": {
+        "MaMuc": "DH1",
+        "TenMuc": "Đại học"
+      },
+      "TinhTrangHoatDong": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      }
+    }
+  ],
+  "nguoiHocList": [
+    {
+      "MaMOET": "1234566",
+      "HoVaTen": "Nguyễn Hương Giang",
+      "NgaySinh": "24/12/2016",
+      "GioiTinh": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      },
+      "DienChinhSachUuTien": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      },
+      "CapHoc": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      },
+      "CapBacTrinhDoDaoTao": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      },
+      "NoiDangTheoHoc": "Đang hoạt động",
+      "TrangThaiHocTap": {
+        "MaMuc": "01",
+        "TenMuc": "Đang hoạt động"
+      }
+    }
+  ],
+  "nhaGiaoCanBoList": [
+    {
+      "MaMOET": "1234566",
+      "HoVaTen": "Nguyễn Hương Giang",
+      "NgaySinh": "24/12/2016",
+      "GioiTinh": {
+        "MaMuc":"01",
+        "TenMuc":"Nam"
+      },
+      "NoiCongTac": {
+        "MaMuc":"01",
+        "TenMuc":"Cơ quan quản lý"
+      }
+    }
+  ]
+}

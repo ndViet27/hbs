@@ -22,6 +22,7 @@ const tabIndex = ref(0);
 const thongTinChungCuaCoSo = ref({});
 const thongTinTuyenSinh = ref({});
 const danhSachNhapHoc = ref({});
+const chungThuSo = ref({});
 
 const currentTabId = ref("thongTinChungCuaCoSo");
 
@@ -57,6 +58,10 @@ const loadConfiguration = async () => {
     console.log(config);
     jsondata.value = config;
     detail.value = config["detail"];
+    thongTinChungCuaCoSo.value = getTab("thongTinChungCuaCoSo");
+    thongTinTuyenSinh.value = getTab("thongTinTuyenSinh");
+    danhSachNhapHoc.value = getTab("danhSachNhapHoc");
+    chungThuSo.value = getTab("chungThuSo");
 
     configLoaded.value = true;
     return config;
@@ -66,6 +71,37 @@ const loadConfiguration = async () => {
 
     throw error;
   }
+};
+
+const getValue = function (obj, key) {
+  const keys = key.split(".");
+  let value = obj;
+  for (let i = 0; i < keys.length; i++) {
+    if (value && typeof value === "object" && keys[i] in value) {
+      value = value[keys[i]];
+    } else {
+      return "";
+    }
+  }
+  return value;
+};
+const dateLocale = function (dateInput) {
+  if (!dateInput) return "";
+  let date = new Date(dateInput);
+  return `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}/${date.getFullYear()}`;
+};
+const dateLocaleTime = function (dateInput) {
+  let date = new Date(dateInput);
+  return `${date.getHours().toString().padStart(2, "0")}:${date
+    .getMinutes()
+    .toString()
+    .padStart(2, "0")} ${date.getDate().toString().padStart(2, "0")}/${(
+    date.getMonth() + 1
+  )
+    .toString()
+    .padStart(2, "0")}/${date.getFullYear()}`;
 };
 
 const setupPromise = loadConfiguration().then(() => {
@@ -124,46 +160,61 @@ const setupPromise = loadConfiguration().then(() => {
             <v-window-item value="thongTinChungCuaCoSo">
               <v-row class="mx-0 my-0">
                 <v-col>
-                  <v-row>
-                    <v-col cols="7">
-                      <div
-                        class=""
-                        v-for="(item, i) in getTab(
-                          'thongTinChungCuaCoSo'
-                        )?.formInfo.slice(0, 8)"
-                        :key="'left-' + i"
-                      >
-                        <label class="font-weight-medium mr-2"
-                          >{{ item.label }}:</label
+                  <v-row
+                    class="mx-0 my-0 px-0"
+                    v-if="
+                      thongTinChungCuaCoSo.formInfo &&
+                      thongTinChungCuaCoSo.formInfo.length
+                    "
+                  >
+                    <template
+                      v-for="(item, index) in thongTinChungCuaCoSo.formInfo"
+                      v-bind:key="index"
+                    >
+                      <v-col :class="item['class']">
+                        <span class="label-text font-weight-medium mr-2">
+                          {{ item.title }}:
+                        </span>
+                        <span class="content-text" v-if="item.type == 'date'">
+                          <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocale(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                        </span>
+                        <span
+                          class="content-text"
+                          v-else-if="item.type == 'datetime'"
+                          :style="
+                            item.hasOwnProperty('style') ? item.style : ''
+                          "
                         >
-                      </div>
-                    </v-col>
-
-                    <v-col >
-                      <div
-                        class=""
-                        v-for="(item, i) in getTab(
-                          'thongTinChungCuaCoSo'
-                        )?.formInfo.slice(8)"
-                        :key="'right-' + i"
-                      >
-                        <label class="font-weight-medium mr-2"
-                          >{{ item.label }}:</label
+                          <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocaleTime(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                        </span>
+                        <span
+                          class="content-text"
+                          v-else
+                          :style="
+                            item.hasOwnProperty('style') ? item.style : ''
+                          "
                         >
-                      </div>
-                    </v-col>
+                          <!-- {{ getValue(thongTinDoiTuong, item.value) }} -->
+                        </span>
+                      </v-col>
+                    </template>
                   </v-row>
                   <v-row>
                     <v-col>
                       <label>
-                        {{
-                          getTab("thongTinChungCuaCoSo")?.danhSachLanhDao.title
-                        }}
+                        {{ thongTinChungCuaCoSo?.danhSachLanhDao?.title }}
                       </label>
                       <v-data-table
                         :headers="
-                          getTab('thongTinChungCuaCoSo')?.danhSachLanhDao
-                            .tableHeaders
+                          thongTinChungCuaCoSo?.danhSachLanhDao?.tableHeaders
                         "
                         item-value="primKey"
                         hide-default-footer
@@ -179,14 +230,12 @@ const setupPromise = loadConfiguration().then(() => {
                     <v-col>
                       <label>
                         {{
-                          getTab("thongTinChungCuaCoSo")
-                            ?.danhSachChuanChuongTrinh.title
+                          thongTinChungCuaCoSo?.danhSachChuanChuongTrinh?.title
                         }}
                       </label>
                       <v-data-table
                         :headers="
-                          getTab('thongTinChungCuaCoSo')
-                            ?.danhSachChuanChuongTrinh.tableHeaders
+                          thongTinChungCuaCoSo?.danhSachChuanChuongTrinh?.tableHeaders
                         "
                         item-value="primKey"
                         hide-default-footer
@@ -235,7 +284,7 @@ const setupPromise = loadConfiguration().then(() => {
             <v-window-item value="thongTinTuyenSinh">
               <v-row class="mx-0 my-0">
                 <v-data-table
-                  :headers="getTab('thongTinTuyenSinh')?.tableHeaders"
+                  :headers="thongTinTuyenSinh?.tableHeaders"
                   item-value="primKey"
                   hide-default-footer
                   class="table-base"
@@ -280,7 +329,7 @@ const setupPromise = loadConfiguration().then(() => {
             <v-window-item value="danhSachNhapHoc">
               <v-row class="mx-0 my-0">
                 <v-data-table
-                  :headers="getTab('danhSachNhapHoc')?.tableHeaders"
+                  :headers="danhSachNhapHoc?.tableHeaders"
                   item-value="primKey"
                   hide-default-footer
                   class="table-base"
@@ -324,33 +373,40 @@ const setupPromise = loadConfiguration().then(() => {
               </v-row>
             </v-window-item>
             <v-window-item value="chungThuSo">
-              <v-row>
-                <v-col cols="4">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('chungThuSo')?.formInfo.slice(
-                      0,
-                      4
-                    )"
-                    :key="'left-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+              <v-row
+                class="mx-0 my-0 px-0"
+                v-if="chungThuSo.formInfo && chungThuSo.formInfo.length"
+              >
+                <template v-for="(item, index) in chungThuSo.formInfo" v-bind:key="index">
+                  <v-col :class="item['class']">
+                    <span class="label-text font-weight-medium mr-2"> {{ item.title }}: </span>
+                    <span class="content-text" v-if="item.type == 'date'">
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocale(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else-if="item.type == 'datetime'"
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
-
-                <v-col cols="">
-                  <div
-                    class=""
-                    v-for="(item, i) in getTab('chungThuSo')?.formInfo.slice(4)"
-                    :key="'right-' + i"
-                  >
-                    <label class="font-weight-medium mr-2"
-                      >{{ item.label }}:</label
+                      <!-- {{
+                        thongTinDoiTuong.hasOwnProperty(item.value)
+                          ? dateLocaleTime(thongTinDoiTuong[item.value])
+                          : ""
+                      }} -->
+                    </span>
+                    <span
+                      class="content-text"
+                      v-else
+                      :style="item.hasOwnProperty('style') ? item.style : ''"
                     >
-                  </div>
-                </v-col>
+                      <!-- {{ getValue(thongTinDoiTuong, item.value) }} -->
+                    </span>
+                  </v-col>
+                </template>
               </v-row>
 
               <v-row class="mx-0 my-0 mt-3">
